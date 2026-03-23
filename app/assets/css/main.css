@@ -1,0 +1,61 @@
+@import "tailwindcss";
+@source "../**/*.vue";
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+
+  /* Brand: Deep Navy */
+  --color-navy-50:  #eef2f7;
+  --color-navy-100: #d5e0ec;
+  --color-navy-200: #adc2d9;
+  --color-navy-300: #7d9ec3;
+  --color-navy-400: #527aac;
+  --color-navy-500: #3a5f8f;
+  --color-navy-600: #2d4a72;
+  --color-navy-700: #1f3654;
+  --color-navy-800: #162540;
+  --color-navy-900: #0d1f35;
+  --color-navy-950: #070f1a;
+
+  /* Brand: Terracotta */
+  --color-terracotta-50:  #fdf4f0;
+  --color-terracotta-100: #fae5da;
+  --color-terracotta-200: #f5cab5;
+  --color-terracotta-300: #eda88a;
+  --color-terracotta-400: #e3835a;
+  --color-terracotta-500: #c4633a;
+  --color-terracotta-600: #a84e2c;
+  --color-terracotta-700: #8a3d22;
+  --color-terracotta-800: #6e301b;
+  --color-terracotta-900: #572617;
+
+  /* Brand: Gold */
+  --color-gold-50:  #fdf8ee;
+  --color-gold-100: #faedd0;
+  --color-gold-200: #f4d99f;
+  --color-gold-300: #ecc06a;
+  --color-gold-400: #e4a53f;
+  --color-gold-500: #d4903a;
+  --color-gold-600: #b87230;
+  --color-gold-700: #925825;
+  --color-gold-800: #734420;
+  --color-gold-900: #5c361b;
+
+  /* Surfaces */
+  --color-cream:      #fafaf8;
+  --color-warm-grey:  #f5f3ef;
+}
+
+/* ─── Base ─────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-navy-900);
+}
