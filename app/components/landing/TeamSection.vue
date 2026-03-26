@@ -1,89 +1,64 @@
-<template>
-  <section id="about" class="bg-cream">
-    <div class="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
-
-      <!-- Label + Headline -->
-      <p class="mb-4 text-center text-xs font-semibold uppercase tracking-widest text-terracotta-500">
-        The Team
-      </p>
-      <h2 class="text-center text-3xl font-extrabold tracking-tight text-navy-900 sm:text-4xl">
-        Founded by People Who Know This Market.
-      </h2>
-      <p class="mx-auto mt-4 max-w-xl text-center text-base leading-relaxed text-navy-600">
-        We've worked in, researched, and built for Sub-Saharan markets. This isn't a hypothesis — it's lived experience.
-      </p>
-
-      <!-- Team grid -->
-      <div class="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        <div
-          v-for="member in team"
-          :key="member.name"
-          class="group flex flex-col items-start rounded-2xl bg-white p-8 ring-1 ring-navy-100 transition-shadow hover:shadow-md"
-        >
-          <!-- Avatar -->
-          <div class="relative mb-6">
-            <div
-              class="flex h-20 w-20 items-center justify-center overflow-hidden rounded-full ring-4 ring-cream"
-              :class="member.avatarBg"
-            >
-              <!-- Swap for NuxtImg when photo assets are ready -->
-              <span class="text-2xl font-extrabold text-white">{{ initials(member.name) }}</span>
-            </div>
-            <!-- LinkedIn badge -->
-            <a
-              v-if="member.linkedin"
-              :href="member.linkedin"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="absolute -bottom-1 -right-1 flex h-7 w-7 items-center justify-center rounded-full bg-navy-700 text-white ring-2 ring-cream transition-colors hover:bg-navy-900"
-              :aria-label="`${member.name} on LinkedIn`"
-            >
-              <!-- LinkedIn icon -->
-              <svg class="h-3.5 w-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-              </svg>
-            </a>
-          </div>
-
-          <!-- Name + title -->
-          <p class="text-base font-bold text-navy-900">{{ member.name }}</p>
-          <p class="mt-0.5 text-sm font-medium text-terracotta-500">{{ member.title }}</p>
-
-          <!-- Bio -->
-          <p class="mt-4 text-sm leading-relaxed text-navy-600">{{ member.bio }}</p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-</template>
-
 <script setup lang="ts">
-function initials(name: string) {
-  return name.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase()
-}
-
-const team = [
+const capabilities = [
   {
-    name: 'Founder Name',
-    title: 'CEO & Co-Founder',
-    bio: 'Background in [relevant field]. Previously [relevant experience]. Deep roots in Sub-Saharan markets through [connection]. Based in London.',
-    linkedin: '#',
-    avatarBg: 'bg-navy-900',
+    icon: 'i-heroicons-presentation-chart-line',
+    label: 'Strategic leadership and enterprise transformation experience',
   },
   {
-    name: 'Founder Name',
-    title: 'CTO & Co-Founder',
-    bio: 'Background in [relevant field]. Previously [relevant experience]. Deep roots in Sub-Saharan markets through [connection]. Based in London.',
-    linkedin: '#',
-    avatarBg: 'bg-terracotta-500',
+    icon: 'i-heroicons-cog-6-tooth',
+    label: 'Operational experience in complex, high-volume environments',
   },
   {
-    name: 'Advisor Name',
-    title: 'Strategic Advisor',
-    bio: 'Background in [relevant field]. Previously [relevant experience]. Deep roots in Sub-Saharan markets through [connection]. Based in London.',
-    linkedin: '#',
-    avatarBg: 'bg-navy-700',
+    icon: 'i-heroicons-cpu-chip',
+    label: 'Technology, fintech and startup execution capability',
+  },
+  {
+    icon: 'i-heroicons-globe-europe-africa',
+    label: 'Cross-regional perspective with UK-based governance discipline',
   },
 ]
 </script>
+
+<template>
+  <section id="team" class="bg-warm-grey py-24 lg:py-32">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+
+        <!-- Left: copy -->
+        <div>
+          <h2 class="text-3xl sm:text-4xl font-bold text-charcoal-900 tracking-tight mb-6">
+            Built with execution discipline
+          </h2>
+          <p class="text-base sm:text-lg text-charcoal-600 leading-relaxed">
+            d'Market is being developed by a leadership team with experience across strategy, operations, technology and scale execution, supported by networks spanning Africa, the UK and Europe. The business is being shaped with a clear focus on practical delivery, responsible growth and long-term market credibility.
+          </p>
+          <div class="border-t border-charcoal-200 mt-10 pt-8 space-y-2">
+            <p class="text-charcoal-500 italic text-sm sm:text-base">
+              A UK-based venture with regional understanding and a disciplined approach to scale.
+            </p>
+            <p class="text-sm font-medium text-charcoal-700">
+              Now engaging aligned investors, strategic partners and non-executive support.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right: 2×2 capability grid -->
+        <div class="grid grid-cols-2 gap-4">
+          <div
+            v-for="cap in capabilities"
+            :key="cap.label"
+            class="bg-white rounded-2xl p-5 shadow-sm"
+          >
+            <div class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-charcoal-50">
+              <UIcon :name="cap.icon" class="size-5 text-charcoal-400" />
+            </div>
+            <p class="text-sm font-medium text-charcoal-700 leading-snug mt-3">
+              {{ cap.label }}
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</template>

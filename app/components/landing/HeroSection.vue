@@ -1,92 +1,68 @@
 <script setup lang="ts">
-// Set to true and provide src when video asset is ready
-const videoSrc = ''
-const hasVideo = computed(() => !!videoSrc)
+import heroPhoto from '~/assets/img/photo/excited-african-market-woman-using-mobile-phone.jpg'
 </script>
 
 <template>
-  <section class="bg-cream">
-    <div class="mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-24">
-      <div class="grid items-center gap-12 lg:grid-cols-[1fr_auto] lg:gap-16">
+  <section class="relative min-h-screen flex items-center bg-white pt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20 lg:py-28">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
-        <!-- Copy -->
-        <div class="max-w-2xl">
+        <!-- Left: copy -->
+        <div class="space-y-7 lg:space-y-8">
 
           <!-- Eyebrow -->
-          <p class="mb-5 text-xs font-semibold uppercase tracking-widest text-terracotta-500">
-            Early Access Now Open
+          <p class="text-green-600 font-medium italic text-sm sm:text-base">
+            Mobile marketplace for local trade across Sub-Saharan Africa
           </p>
 
-          <!-- H1 -->
-          <h1 class="text-4xl font-extrabold leading-[1.1] tracking-tight text-navy-900 sm:text-5xl lg:text-6xl">
-            Where Local Markets Become Global Commerce.
+          <!-- Headline -->
+          <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold text-charcoal-900 tracking-tight leading-[1.05]">
+            Buy local.<br>Sell big.
           </h1>
 
-          <!-- Subheadline -->
-          <p class="mt-6 text-lg leading-relaxed text-navy-700 sm:text-xl">
-            d'Market is a mobile-first marketplace connecting Sub-Saharan traders with buyers —
-            through real-time discovery, intelligent matching, and tools built for how African
-            trade actually works.
+          <!-- Supporting copy -->
+          <p class="text-base sm:text-lg text-charcoal-600 leading-relaxed max-w-lg">
+            Designed for informal traders and everyday buyers, d'Market helps people discover nearby products and services, build trust through reputation, and grow local trade through mobile-first commerce.
           </p>
 
           <!-- CTAs -->
-          <div class="mt-10 flex flex-wrap items-center gap-4">
+          <div class="flex flex-col sm:flex-row gap-3 pt-1">
             <a
-              href="#register-interest"
-              class="inline-flex items-center rounded-md bg-terracotta-500 px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-terracotta-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-terracotta-500"
+              href="#register"
+              class="inline-flex justify-center items-center px-6 py-3 rounded-xl text-sm font-medium text-white bg-orange-500 hover:bg-orange-600 transition-colors duration-150"
             >
-              Join as a Trader
+              Register your interest
             </a>
-            <a
-              href="#register-interest"
-              class="inline-flex items-center rounded-md border border-navy-300 px-6 py-3.5 text-sm font-semibold text-navy-700 transition-colors hover:border-navy-500 hover:text-navy-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy-500"
+            <button
+              type="button"
+              class="inline-flex justify-center items-center gap-2 px-6 py-3 rounded-xl text-sm font-medium text-charcoal-700 border border-charcoal-200 hover:bg-charcoal-50 transition-colors duration-150"
             >
-              Investor Enquiries
-            </a>
+              <UIcon name="i-heroicons-play-circle" class="size-5 text-orange-500" />
+              Watch validation video
+            </button>
           </div>
 
-          <!-- Micro-copy -->
-          <p class="mt-4 text-sm text-navy-500">
-            No commitment required. We'll be in touch directly.
-          </p>
+          <!-- Trust signals -->
+          <div class="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs text-charcoal-400 pt-1">
+            <span>UK-based venture</span>
+            <span aria-hidden="true">·</span>
+            <span>Research-led</span>
+            <span aria-hidden="true">·</span>
+            <span>SEIS Advance Assurance granted</span>
+          </div>
+
         </div>
 
-        <!-- Media -->
-        <div class="w-full lg:w-[520px] xl:w-[580px]">
-          <div class="relative overflow-hidden rounded-2xl bg-navy-900 shadow-2xl" style="aspect-ratio: 4/3;">
-
-            <!-- Video (when asset is ready) -->
-            <video
-              v-if="hasVideo"
-              :src="videoSrc"
-              autoplay
-              muted
-              loop
-              playsinline
-              class="absolute inset-0 h-full w-full object-cover"
-            />
-
-            <!-- Placeholder (remove when video is ready) -->
-            <div v-else class="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-navy-900 p-8">
-              <!-- Play icon hint -->
-              <div class="flex h-16 w-16 items-center justify-center rounded-full bg-white/10 ring-1 ring-white/20">
-                <svg class="h-7 w-7 translate-x-0.5 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </div>
-              <p class="max-w-xs text-center text-sm leading-relaxed text-white/60">
-                High-res video · Lagos market trader at a stall, using a smartphone · natural light, vibrant colour
-              </p>
-            </div>
-
-            <!-- Overlay gradient — keeps edges clean -->
-            <div class="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-inset ring-white/10" />
-          </div>
-
-          <!-- Caption below media -->
-          <p class="mt-3 text-center text-xs text-navy-400">
-            Real traders. Real markets. Real time.
-          </p>
+        <!-- Right: photo -->
+        <div class="relative order-first lg:order-last">
+          <!-- Offset accent block -->
+          <div class="absolute inset-0 bg-orange-500 rounded-3xl translate-x-4 translate-y-4 opacity-15" aria-hidden="true" />
+          <!-- Photo -->
+          <img
+            :src="heroPhoto"
+            alt="A market trader in Sub-Saharan Africa using her mobile phone to connect with buyers"
+            class="relative w-full h-72 sm:h-96 lg:h-[580px] object-cover rounded-3xl shadow-md"
+          />
         </div>
 
       </div>

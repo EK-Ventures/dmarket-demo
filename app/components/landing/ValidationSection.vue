@@ -1,94 +1,76 @@
+<script setup lang="ts">
+import videoThumbnail from '~/assets/img/photo/young-black-african-businesswoman-local-market-smiling-browsing-online-using-smartphone-checking-reading-news-online-holding-apple.jpg'
+
+const quotes = [
+  'I can sell more if more people know what I have today.',
+  'Trust is the main issue. People need to know who they are buying from.',
+  'We already use our phones for business. We need something built for our market.',
+]
+</script>
+
 <template>
-  <section id="validation" class="relative overflow-hidden bg-navy-900">
+  <section id="validation" class="bg-white py-24 lg:py-32">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 
-    <!-- Subtle dot texture -->
-    <div
-      class="pointer-events-none absolute inset-0"
-      :style="{ backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px)', backgroundSize: '24px 24px' }"
-      aria-hidden="true"
-    />
-
-    <div class="relative mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
-
-      <!-- Label -->
-      <p class="mb-4 text-center text-xs font-semibold uppercase tracking-widest text-terracotta-400">
-        Validation
-      </p>
-
-      <!-- Headline -->
-      <h2 class="text-center text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-        Built on Evidence. Designed for People.
-      </h2>
-
-      <!-- Hero stat -->
-      <div class="mx-auto mt-16 max-w-2xl text-center">
-        <p class="text-7xl font-extrabold tracking-tight text-white sm:text-8xl lg:text-9xl">
-          87<span class="text-terracotta-400">%</span>
-        </p>
-        <p class="mt-4 text-lg font-medium text-navy-300">
-          of traders we spoke to had no digital sales channel of any kind.
-        </p>
-        <p class="mt-2 text-sm text-navy-500">
-          — d'Market Market Research Survey, 2024
+      <!-- Headline + intro -->
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-bold text-charcoal-900 tracking-tight mb-5">
+          Built from real conversations in-market
+        </h2>
+        <p class="text-base sm:text-lg text-charcoal-600 leading-relaxed max-w-2xl mx-auto">
+          d'Market is being shaped by direct engagement with informal traders, buyers and local stakeholders across target territories. The need is consistent: more visibility, more trust, and better ways to grow income through mobile.
         </p>
       </div>
 
-      <!-- Divider -->
-      <div class="mx-auto mt-16 h-px max-w-xs bg-gradient-to-r from-transparent via-navy-600 to-transparent" aria-hidden="true" />
-
-      <!-- Quote cards -->
-      <div class="mt-16 grid gap-6 sm:grid-cols-2">
-
-        <!-- Quote 1: Trader voice -->
-        <figure class="flex flex-col rounded-2xl bg-navy-800/60 p-8 ring-1 ring-white/10 backdrop-blur-sm">
-          <!-- Decorative quote mark -->
-          <span class="mb-4 font-serif text-5xl leading-none text-terracotta-500/60" aria-hidden="true">"</span>
-          <blockquote class="flex-1">
-            <p class="text-base leading-relaxed text-navy-200">
-              If something like this existed, I would use it every day. Every trader I know would.
-            </p>
-          </blockquote>
-          <figcaption class="mt-6 flex items-center gap-3 border-t border-white/10 pt-6">
-            <div class="flex h-9 w-9 items-center justify-center rounded-full bg-terracotta-500/20 ring-1 ring-terracotta-500/30">
-              <svg class="h-4 w-4 text-terracotta-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-              </svg>
-            </div>
-            <div>
-              <p class="text-sm font-semibold text-white">Market trader</p>
-              <p class="text-xs text-navy-400">Lagos, Nigeria · Research interview, 2024</p>
-            </div>
-          </figcaption>
-        </figure>
-
-        <!-- Quote 2: Demand-side / buyer voice -->
-        <figure class="flex flex-col rounded-2xl bg-navy-800/60 p-8 ring-1 ring-white/10 backdrop-blur-sm">
-          <span class="mb-4 font-serif text-5xl leading-none text-terracotta-500/60" aria-hidden="true">"</span>
-          <blockquote class="flex-1">
-            <p class="text-base leading-relaxed text-navy-200">
-              Finding reliable local suppliers is our biggest operational challenge. A trusted platform would change everything.
-            </p>
-          </blockquote>
-          <figcaption class="mt-6 flex items-center gap-3 border-t border-white/10 pt-6">
-            <div class="flex h-9 w-9 items-center justify-center rounded-full bg-terracotta-500/20 ring-1 ring-terracotta-500/30">
-              <svg class="h-4 w-4 text-terracotta-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-              </svg>
-            </div>
-            <div>
-              <p class="text-sm font-semibold text-white">SME buyer</p>
-              <p class="text-xs text-navy-400">Nairobi, Kenya · Research interview, 2024</p>
-            </div>
-          </figcaption>
-        </figure>
-
+      <!-- Video block -->
+      <div class="relative aspect-video rounded-2xl overflow-hidden group cursor-pointer">
+        <img
+          :src="videoThumbnail"
+          alt="Market trader using a smartphone — still from field validation interviews"
+          class="absolute inset-0 w-full h-full object-cover object-top"
+        />
+        <!-- Dim overlay -->
+        <div class="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors duration-200" aria-hidden="true" />
+        <!-- Play button -->
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="w-16 h-16 rounded-full bg-white shadow-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
+            <UIcon name="i-heroicons-play-solid" class="size-7 text-orange-500 translate-x-0.5" />
+          </div>
+        </div>
       </div>
 
-      <!-- Research callout -->
-      <p class="mx-auto mt-12 max-w-xl text-center text-sm italic leading-relaxed text-navy-500">
-        Our platform design is grounded in direct fieldwork conducted across multiple markets in Sub-Saharan Africa.
-        We didn't build a product and then look for a market.
+      <!-- Watch link -->
+      <p class="text-center text-xs text-charcoal-400 mt-3">
+        Video coming soon — field interviews with traders and buyers across target markets
       </p>
+
+      <!-- Quotes -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-12">
+        <blockquote
+          v-for="quote in quotes"
+          :key="quote"
+          class="bg-warm-grey rounded-2xl p-6"
+        >
+          <span class="block text-5xl leading-none text-orange-300 font-serif mb-3" aria-hidden="true">"</span>
+          <p class="text-charcoal-700 italic leading-relaxed text-sm sm:text-base">
+            {{ quote }}
+          </p>
+        </blockquote>
+      </div>
+
+      <!-- Attribution + CTA -->
+      <div class="text-center mt-10 space-y-5">
+        <p class="text-xs text-charcoal-400 italic">
+          Insights drawn from primary market interviews and partner engagement.
+        </p>
+        <a
+          href="#"
+          class="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-medium text-white bg-orange-500 hover:bg-orange-600 transition-colors duration-150"
+        >
+          <UIcon name="i-heroicons-play-circle" class="size-5" />
+          Watch the validation video
+        </a>
+      </div>
 
     </div>
   </section>

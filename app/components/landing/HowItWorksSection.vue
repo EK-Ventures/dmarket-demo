@@ -1,92 +1,79 @@
-<template>
-  <section id="how-it-works" class="bg-cream">
-    <div class="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
+<script setup lang="ts">
+const steps = [
+  {
+    icon: 'i-heroicons-pencil-square',
+    title: 'List what you sell or offer',
+    body: 'Fresh produce, household goods, or local services.',
+  },
+  {
+    icon: 'i-heroicons-signal',
+    title: 'Get discovered nearby',
+    body: 'Buyers can see what\'s available around them in real time.',
+  },
+  {
+    icon: 'i-heroicons-arrows-right-left',
+    title: 'Match, connect and trade',
+    body: 'Smart matching helps connect supply, demand and availability.',
+  },
+  {
+    icon: 'i-heroicons-shield-check',
+    title: 'Build trust as you grow',
+    body: 'Ratings, reviews and reliability signals help good traders stand out.',
+  },
+]
+</script>
 
-      <!-- Label -->
-      <p class="mb-4 text-center text-xs font-semibold uppercase tracking-widest text-terracotta-500">
-        How It Works
-      </p>
+<template>
+  <section id="how-it-works" class="bg-warm-grey py-24 lg:py-32">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
       <!-- Headline -->
-      <h2 class="text-center text-3xl font-extrabold tracking-tight text-navy-900 sm:text-4xl">
-        Simple for Traders. Powerful for Commerce.
-      </h2>
+      <div class="text-center max-w-xl mx-auto mb-16">
+        <h2 class="text-3xl sm:text-4xl font-bold text-charcoal-900 tracking-tight">
+          Simple to use.<br class="sm:hidden"> Built for everyday trade.
+        </h2>
+      </div>
 
       <!-- Steps -->
-      <div class="mt-16 grid gap-8 sm:grid-cols-3 lg:gap-12">
+      <div class="relative">
+        <!-- Connector line — desktop only -->
         <div
-          v-for="step in steps"
-          :key="step.number"
-          class="flex flex-col items-start"
-        >
-          <!-- Icon container -->
-          <div class="flex h-14 w-14 items-center justify-center rounded-xl bg-navy-50 ring-1 ring-navy-100">
-            <component :is="step.icon" class="h-7 w-7 text-navy-700" aria-hidden="true" />
-          </div>
+          class="hidden md:block absolute top-[1.375rem] left-[14%] right-[14%] h-px bg-charcoal-200"
+          aria-hidden="true"
+        />
 
-          <!-- Step number + heading -->
-          <div class="mt-6 flex items-baseline gap-3">
-            <span class="text-xs font-bold tabular-nums text-terracotta-500">
-              0{{ step.number }}
-            </span>
-            <h3 class="text-lg font-bold text-navy-900">
-              {{ step.heading }}
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 lg:gap-6">
+          <div
+            v-for="(step, index) in steps"
+            :key="step.title"
+            class="relative bg-white rounded-2xl p-6 text-center shadow-sm"
+          >
+            <!-- Step number badge -->
+            <div class="inline-flex items-center justify-center w-11 h-11 rounded-full bg-orange-500 text-white text-sm font-bold mb-5 ring-4 ring-warm-grey">
+              {{ index + 1 }}
+            </div>
+
+            <!-- Icon -->
+            <div class="flex justify-center mb-3">
+              <UIcon :name="step.icon" class="size-6 text-charcoal-300" />
+            </div>
+
+            <!-- Text -->
+            <h3 class="text-base font-semibold text-charcoal-900 mb-2">
+              {{ step.title }}
             </h3>
+            <p class="text-sm text-charcoal-500 leading-relaxed">
+              {{ step.body }}
+            </p>
           </div>
-
-          <!-- Description -->
-          <p class="mt-3 text-base leading-relaxed text-navy-600">
-            {{ step.description }}
-          </p>
         </div>
       </div>
+
+      <!-- Microcopy -->
+      <p class="text-center text-sm text-charcoal-400 italic mt-10">
+        Designed for mobile-first markets and everyday users.
+      </p>
 
     </div>
   </section>
 </template>
-
-<script setup lang="ts">
-import { defineComponent, h } from 'vue'
-
-// Inline SVG icon components — no icon library dependency
-const IconCamera = defineComponent({
-  render: () => h('svg', { fill: 'none', viewBox: '0 0 24 24', 'stroke-width': '1.5', stroke: 'currentColor' }, [
-    h('path', { 'stroke-linecap': 'round', 'stroke-linejoin': 'round', d: 'M6.827 6.175A2.31 2.31 0 0 1 5.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 0 0-1.134-.175 2.31 2.31 0 0 1-1.64-1.055l-.822-1.316a2.192 2.192 0 0 0-1.736-1.039 48.774 48.774 0 0 0-5.232 0 2.192 2.192 0 0 0-1.736 1.039l-.821 1.316Z' }),
-    h('path', { 'stroke-linecap': 'round', 'stroke-linejoin': 'round', d: 'M16.5 12.75a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0ZM18.75 10.5h.008v.008h-.008V10.5Z' }),
-  ]),
-})
-
-const IconRadar = defineComponent({
-  render: () => h('svg', { fill: 'none', viewBox: '0 0 24 24', 'stroke-width': '1.5', stroke: 'currentColor' }, [
-    h('path', { 'stroke-linecap': 'round', 'stroke-linejoin': 'round', d: 'M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z' }),
-    h('path', { 'stroke-linecap': 'round', 'stroke-linejoin': 'round', d: 'M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z' }),
-  ]),
-})
-
-const IconStar = defineComponent({
-  render: () => h('svg', { fill: 'none', viewBox: '0 0 24 24', 'stroke-width': '1.5', stroke: 'currentColor' }, [
-    h('path', { 'stroke-linecap': 'round', 'stroke-linejoin': 'round', d: 'M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z' }),
-  ]),
-})
-
-const steps = [
-  {
-    number: 1,
-    icon: IconCamera,
-    heading: 'List Your Goods',
-    description: 'Take a photo, set your price, go live in minutes. d\'Market is built for low-bandwidth environments — it works where you work.',
-  },
-  {
-    number: 2,
-    icon: IconRadar,
-    heading: 'Get Discovered',
-    description: 'Buyers nearby find your products in real time. Our intelligent matching surfaces your listings to the right people at the right moment.',
-  },
-  {
-    number: 3,
-    icon: IconStar,
-    heading: 'Build Your Reputation',
-    description: 'Every sale builds your rating. Ratings build trust. Trust builds a business.',
-  },
-]
-</script>

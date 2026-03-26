@@ -1,117 +1,121 @@
 <script setup lang="ts">
-const isScrolled = ref(false)
-const isMobileOpen = ref(false)
+import logoLight from '~/assets/img/logo-light.svg'
 
-const links = [
-  { label: 'How It Works', href: '#how-it-works' },
-  { label: 'For Traders',  href: '#for-traders' },
-  { label: 'For Investors', href: '#for-investors' },
-  { label: 'About',        href: '#about' },
+const scrolled = ref(false)
+const menuOpen = ref(false)
+
+const navLinks = [
+  { label: 'How it works', href: '#how-it-works' },
+  { label: 'For traders', href: '#for-traders' },
+  { label: 'Validation', href: '#validation' },
+  { label: 'For investors', href: '#investors' },
+  { label: 'Team', href: '#team' },
 ]
 
-function onScroll() {
-  isScrolled.value = window.scrollY > 8
-}
-
-function closeMenu() {
-  isMobileOpen.value = false
-}
-
-onMounted(() => window.addEventListener('scroll', onScroll, { passive: true }))
-onUnmounted(() => window.removeEventListener('scroll', onScroll))
+onMounted(() => {
+  const handler = () => { scrolled.value = window.scrollY > 8 }
+  window.addEventListener('scroll', handler, { passive: true })
+  onUnmounted(() => window.removeEventListener('scroll', handler))
+})
 </script>
 
 <template>
   <header
-    class="fixed inset-x-0 top-0 z-50 bg-white transition-shadow duration-300"
-    :class="isScrolled ? 'shadow-sm' : ''"
+    class="fixed top-0 inset-x-0 z-50 transition-all duration-200"
+    :class="scrolled ? 'bg-white shadow-sm' : 'bg-transparent'"
   >
-    <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
 
-      <!-- Logo -->
-      <a href="/" class="flex-shrink-0" aria-label="d'Market home">
-        <span class="text-xl font-extrabold tracking-tight text-navy-900">
-          d<span class="text-terracotta-500">'</span>Market
-        </span>
-      </a>
+        <!-- Logo -->
+        <a href="/" class="flex-shrink-0">
+          <img :src="logoLight" alt="d'Market" class="h-8 w-auto" />
+        </a>
 
-      <!-- Desktop links -->
-      <ul class="hidden items-center gap-8 lg:flex" role="list">
-        <li v-for="link in links" :key="link.href">
+        <!-- Desktop nav links -->
+        <nav class="hidden lg:flex items-center gap-7" aria-label="Main navigation">
           <a
+            v-for="link in navLinks"
+            :key="link.href"
             :href="link.href"
-            class="text-sm font-medium text-navy-700 transition-colors hover:text-terracotta-500"
+            class="text-sm font-medium text-charcoal-700 hover:text-charcoal-900 transition-colors duration-150"
           >
             {{ link.label }}
           </a>
-        </li>
-      </ul>
+        </nav>
 
-      <!-- Desktop CTA -->
-      <div class="hidden lg:block">
-        <a
-          href="#register-interest"
-          class="inline-flex items-center rounded-md bg-terracotta-500 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-terracotta-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-terracotta-500"
-        >
-          Register Interest
-        </a>
+        <!-- Desktop CTAs -->
+        <div class="hidden lg:flex items-center gap-3">
+          <a
+            href="#register"
+            class="inline-flex items-center px-4 py-2 rounded-xl text-sm font-medium text-white bg-orange-500 hover:bg-orange-600 transition-colors duration-150"
+          >
+            Register interest
+          </a>
+          <a
+            href="#investors"
+            class="inline-flex items-center px-4 py-2 rounded-xl text-sm font-medium text-charcoal-800 border border-charcoal-200 hover:bg-charcoal-50 transition-colors duration-150"
+          >
+            Investor / NED interest
+          </a>
+        </div>
+
+        <!-- Mobile: primary CTA + hamburger -->
+        <div class="flex lg:hidden items-center gap-2">
+          <a
+            href="#register"
+            class="inline-flex items-center px-3.5 py-2 rounded-xl text-sm font-medium text-white bg-orange-500 hover:bg-orange-600 transition-colors duration-150"
+          >
+            Register interest
+          </a>
+          <button
+            type="button"
+            class="p-2 rounded-lg text-charcoal-700 hover:text-charcoal-900 hover:bg-charcoal-50 transition-colors"
+            :aria-label="menuOpen ? 'Close menu' : 'Open menu'"
+            :aria-expanded="menuOpen"
+            @click="menuOpen = !menuOpen"
+          >
+            <UIcon
+              :name="menuOpen ? 'i-heroicons-x-mark' : 'i-heroicons-bars-3'"
+              class="size-5"
+            />
+          </button>
+        </div>
+
       </div>
-
-      <!-- Mobile: hamburger -->
-      <button
-        class="flex items-center justify-center rounded-md p-2 text-navy-700 transition-colors hover:bg-warm-grey lg:hidden"
-        :aria-expanded="isMobileOpen"
-        aria-controls="mobile-menu"
-        aria-label="Toggle navigation"
-        @click="isMobileOpen = !isMobileOpen"
-      >
-        <svg v-if="!isMobileOpen" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke-width="1.75" stroke="currentColor" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-        </svg>
-        <svg v-else class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke-width="1.75" stroke="currentColor" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-        </svg>
-      </button>
-    </nav>
+    </div>
 
     <!-- Mobile menu -->
     <Transition
-      enter-active-class="transition duration-150 ease-out"
-      enter-from-class="opacity-0 -translate-y-1"
-      enter-to-class="opacity-100 translate-y-0"
-      leave-active-class="transition duration-100 ease-in"
-      leave-from-class="opacity-100 translate-y-0"
-      leave-to-class="opacity-0 -translate-y-1"
+      enter-active-class="transition duration-200 ease-out"
+      enter-from-class="-translate-y-1 opacity-0"
+      enter-to-class="translate-y-0 opacity-100"
+      leave-active-class="transition duration-150 ease-in"
+      leave-from-class="translate-y-0 opacity-100"
+      leave-to-class="-translate-y-1 opacity-0"
     >
-      <div
-        v-if="isMobileOpen"
-        id="mobile-menu"
-        class="border-t border-navy-100 bg-white px-6 pb-6 pt-4 lg:hidden"
-      >
-        <ul class="flex flex-col gap-1" role="list">
-          <li v-for="link in links" :key="link.href">
-            <a
-              :href="link.href"
-              class="block rounded-md px-3 py-2.5 text-sm font-medium text-navy-700 transition-colors hover:bg-warm-grey hover:text-navy-900"
-              @click="closeMenu"
-            >
-              {{ link.label }}
-            </a>
-          </li>
-        </ul>
-        <div class="mt-4 border-t border-navy-100 pt-4">
+      <div v-if="menuOpen" class="lg:hidden bg-white border-t border-charcoal-100 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 space-y-0.5">
           <a
-            href="#register-interest"
-            class="block rounded-md bg-terracotta-500 px-5 py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-terracotta-600"
-            @click="closeMenu"
+            v-for="link in navLinks"
+            :key="link.href"
+            :href="link.href"
+            class="block px-3 py-2.5 rounded-lg text-sm font-medium text-charcoal-700 hover:text-charcoal-900 hover:bg-charcoal-50 transition-colors"
+            @click="menuOpen = false"
           >
-            Register Interest
+            {{ link.label }}
           </a>
+          <div class="flex flex-col gap-2 pt-3 pb-1 border-t border-charcoal-100 mt-2">
+            <a
+              href="#investors"
+              class="inline-flex justify-center items-center px-4 py-2.5 rounded-xl text-sm font-medium text-charcoal-800 border border-charcoal-200 hover:bg-charcoal-50 transition-colors"
+              @click="menuOpen = false"
+            >
+              Investor / NED interest
+            </a>
+          </div>
         </div>
       </div>
     </Transition>
   </header>
-
-  <!-- Spacer so page content doesn't sit under the fixed nav -->
-  <div class="h-[73px]" aria-hidden="true" />
 </template>

@@ -1,63 +1,51 @@
+<script setup lang="ts">
+const stats = [
+  { number: '1.2bn', label: 'Population across Sub-Saharan Africa' },
+  { number: '660m', label: 'Informal economy workers' },
+  { number: '460m+', label: 'Smartphone users and growing' },
+]
+</script>
+
 <template>
-  <section id="opportunity" class="bg-warm-grey">
-    <div class="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
+  <section id="investors" class="bg-warm-grey py-24 lg:py-32">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-      <!-- Label -->
-      <p class="mb-4 text-center text-xs font-semibold uppercase tracking-widest text-terracotta-500">
-        The Opportunity
-      </p>
-
-      <!-- Headline -->
-      <h2 class="mx-auto max-w-3xl text-center text-3xl font-extrabold leading-tight tracking-tight text-navy-900 sm:text-4xl lg:text-5xl">
-        £2 trillion in informal trade. Almost none of it digital.
-      </h2>
-
-      <!-- Body -->
-      <div class="mx-auto mt-8 max-w-2xl text-center">
-        <p class="text-lg leading-relaxed text-navy-700">
-          Sub-Saharan Africa's informal economy is one of the largest untapped markets on earth —
-          yet most of it runs on word-of-mouth, physical proximity, and cash. Traders have limited
-          reach. Buyers have limited discovery. And spoilage, pricing inefficiency, and trust gaps
-          cost billions annually.
-        </p>
-        <p class="mt-5 text-lg font-semibold text-navy-900">
-          d'Market was built to change that.
-        </p>
-      </div>
-
-      <!-- Stats -->
-      <div class="mt-16 grid gap-px overflow-hidden rounded-2xl bg-navy-200 sm:grid-cols-3">
-        <div
-          v-for="stat in stats"
-          :key="stat.value"
-          class="flex flex-col items-center bg-warm-grey px-8 py-10 text-center"
-        >
-          <span class="text-5xl font-extrabold tracking-tight text-navy-900 lg:text-6xl">
-            {{ stat.value }}
-          </span>
-          <span class="mt-3 text-sm font-medium leading-snug text-navy-600">
-            {{ stat.label }}
-          </span>
+        <!-- Left: narrative -->
+        <div class="space-y-6">
+          <p class="text-green-600 font-medium italic text-sm">
+            The opportunity
+          </p>
+          <h2 class="text-3xl sm:text-4xl font-bold text-charcoal-900 tracking-tight">
+            A large market with everyday demand
+          </h2>
+          <p class="text-base sm:text-lg text-charcoal-600 leading-relaxed">
+            Africa's informal economy is vast, mobile-first and increasingly digital. Yet local trade remains fragmented, low-visibility and trust-constrained. d'Market is built to serve that gap with a model designed for repeat local use, scalable across markets and categories.
+          </p>
         </div>
-      </div>
 
+        <!-- Right: stat tiles -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-4">
+          <div
+            v-for="stat in stats"
+            :key="stat.number"
+            class="bg-white rounded-2xl px-6 py-5 flex items-center gap-5 shadow-sm"
+          >
+            <!-- Orange accent bar -->
+            <div class="w-1 self-stretch rounded-full bg-orange-500 flex-shrink-0" aria-hidden="true" />
+            <!-- Stat content -->
+            <div>
+              <p class="text-3xl font-bold text-charcoal-900 tracking-tight leading-none mb-1">
+                {{ stat.number }}
+              </p>
+              <p class="text-sm text-charcoal-500 leading-snug">
+                {{ stat.label }}
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 </template>
-
-<script setup lang="ts">
-const stats = [
-  {
-    value: '£2T',
-    label: 'Sub-Saharan informal GDP — largely untouched by digital commerce',
-  },
-  {
-    value: '600M+',
-    label: 'Informal workers across the continent with no scalable sales channel',
-  },
-  {
-    value: '72%',
-    label: 'Of traders cite trust as the primary barrier to selling online',
-  },
-]
-</script>
