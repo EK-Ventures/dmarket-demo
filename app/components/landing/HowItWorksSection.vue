@@ -38,7 +38,7 @@ const steps = [
       <div class="relative">
         <!-- Connector line — desktop only -->
         <div
-          class="hidden md:block absolute top-[1.375rem] left-[14%] right-[14%] h-px bg-charcoal-200"
+          class="hidden md:block absolute top-[2.875rem] left-[14%] right-[14%] h-px bg-charcoal-200"
           aria-hidden="true"
         />
 

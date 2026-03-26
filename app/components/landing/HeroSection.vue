@@ -4,7 +4,7 @@ import heroPhoto from '~/assets/img/photo/excited-african-market-woman-using-mob
 
 <template>
   <section class="relative min-h-screen flex items-center bg-white pt-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-8 pb-20 lg:py-28">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
         <!-- Left: copy -->

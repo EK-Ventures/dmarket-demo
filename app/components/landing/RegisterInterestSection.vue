@@ -16,7 +16,7 @@
         <div class="bg-orange-500 rounded-2xl p-8 lg:p-10 flex flex-col">
           <div class="flex items-center gap-2 mb-6">
             <div class="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-white/20">
-              <UIcon name="i-heroicons-storefront" class="size-5 text-white" />
+              <UIcon name="i-heroicons-building-storefront" class="size-5 text-white" />
             </div>
             <span class="text-xs font-semibold tracking-widest uppercase text-white/70">
               For traders and partners

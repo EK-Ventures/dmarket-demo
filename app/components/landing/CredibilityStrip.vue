@@ -1,31 +1,46 @@
 <script setup lang="ts">
 const signals = [
-  'UK-based company',
-  'Experienced founding team',
-  'Primary market validation completed',
-  'Built for scalable multi-country rollout',
-  'SEIS Advance Assurance granted',
+  {
+    icon: 'i-heroicons-building-office-2',
+    label: 'UK-based company',
+  },
+  {
+    icon: 'i-heroicons-users',
+    label: 'Experienced founding team',
+  },
+  {
+    icon: 'i-heroicons-clipboard-document-check',
+    label: 'Primary market validation completed',
+  },
+  {
+    icon: 'i-heroicons-globe-alt',
+    label: 'Built for scalable multi-country rollout',
+  },
+  {
+    icon: 'i-heroicons-shield-check',
+    label: 'SEIS Advance Assurance granted',
+  },
 ]
 </script>
 
 <template>
-  <section class="bg-warm-grey border-y border-charcoal-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
-      <ul class="flex flex-wrap justify-center items-center gap-x-6 gap-y-3" role="list">
+  <section class="bg-warm-grey border-y border-charcoal-100 py-12 lg:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <ul
+        class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-6"
+        role="list"
+      >
         <li
-          v-for="(signal, index) in signals"
-          :key="signal"
-          class="flex items-center gap-6"
+          v-for="signal in signals"
+          :key="signal.label"
+          class="flex flex-col items-center text-center"
         >
-          <span
-            v-if="index > 0"
-            class="hidden sm:block h-3.5 w-px bg-charcoal-200"
-            aria-hidden="true"
-          />
-          <span class="text-sm font-medium text-charcoal-600 flex items-center gap-1.5">
-            <span class="text-orange-500 font-bold" aria-hidden="true">—</span>
-            {{ signal }}
-          </span>
+          <div class="w-11 h-11 rounded-full bg-orange-50 flex items-center justify-center flex-shrink-0">
+            <UIcon :name="signal.icon" class="size-5 text-orange-500" />
+          </div>
+          <p class="text-sm font-semibold text-charcoal-700 mt-3 leading-snug">
+            {{ signal.label }}
+          </p>
         </li>
       </ul>
     </div>

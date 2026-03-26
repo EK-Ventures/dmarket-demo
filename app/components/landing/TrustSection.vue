@@ -45,7 +45,7 @@ const features = [
 
           <!-- Background card (depth effect) -->
           <div
-            class="absolute inset-x-0 mx-auto w-full max-w-sm h-full bg-white rounded-2xl shadow-sm rotate-2 translate-y-3 opacity-40"
+            class="absolute inset-0 bg-white rounded-2xl shadow-sm rotate-2 translate-y-3 opacity-40"
             aria-hidden="true"
           />
 

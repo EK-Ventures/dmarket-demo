@@ -51,6 +51,7 @@ const categories = [
             :src="cat.photo"
             :alt="cat.alt"
             class="absolute inset-0 w-full h-full object-cover"
+            loading="lazy"
           />
 
           <!-- Gradient overlay -->

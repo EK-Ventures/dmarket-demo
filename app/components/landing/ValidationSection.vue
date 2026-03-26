@@ -27,7 +27,8 @@ const quotes = [
         <img
           :src="videoThumbnail"
           alt="Market trader using a smartphone — still from field validation interviews"
-          class="absolute inset-0 w-full h-full object-cover object-top"
+          class="absolute inset-0 w-full h-full object-cover object-center"
+          loading="lazy"
         />
         <!-- Dim overlay -->
         <div class="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors duration-200" aria-hidden="true" />
@@ -58,19 +59,10 @@ const quotes = [
         </blockquote>
       </div>
 
-      <!-- Attribution + CTA -->
-      <div class="text-center mt-10 space-y-5">
-        <p class="text-xs text-charcoal-400 italic">
-          Insights drawn from primary market interviews and partner engagement.
-        </p>
-        <a
-          href="#"
-          class="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-medium text-white bg-orange-500 hover:bg-orange-600 transition-colors duration-150"
-        >
-          <UIcon name="i-heroicons-play-circle" class="size-5" />
-          Watch the validation video
-        </a>
-      </div>
+      <!-- Attribution -->
+      <p class="text-center text-xs text-charcoal-400 italic mt-10">
+        Insights drawn from primary market interviews and partner engagement.
+      </p>
 
     </div>
   </section>

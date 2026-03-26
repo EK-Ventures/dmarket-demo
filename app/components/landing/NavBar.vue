@@ -21,7 +21,7 @@ onMounted(() => {
 
 <template>
   <header
-    class="fixed top-0 inset-x-0 z-50 transition-all duration-200"
+    class="fixed top-0 inset-x-0 z-50 transition-all duration-200 backdrop-blur-sm"
     :class="scrolled ? 'bg-white shadow-sm' : 'bg-transparent'"
   >
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
