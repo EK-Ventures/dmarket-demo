@@ -20,7 +20,7 @@
 
 <script setup>
 useHead({
-  title: "d'Market — Buy local. Sell big.",
+  title: "d'Market - Buy local. Sell big.",
   meta: [
     {
       name: 'description',

@@ -6,7 +6,7 @@ const { containerRef } = useScrollReveal()
 const blocks = [
   {
     title: 'Multi-country architecture',
-    body: 'Built from day one to operate across multiple territories — with localisation, language and market-specific configuration designed into the platform architecture.',
+    body: 'Built from day one to operate across multiple territories - with localisation, language and market-specific configuration designed into the platform architecture.',
     tag: 'Scalable by design',
     tagStyle: 'bg-neutral-100 text-neutral-700 border-neutral-200',
     dotColor: 'bg-neutral-500',
@@ -16,7 +16,7 @@ const blocks = [
   },
   {
     title: 'Subscription-led revenue model',
-    body: 'Traders access d\'Market free during onboarding, then move to a flat subscription that covers all core features — creating a predictable, recurring revenue base as the platform scales.',
+    body: 'Traders access d\'Market free during onboarding, then move to a flat subscription that covers all core features - creating a predictable, recurring revenue base as the platform scales.',
     tag: 'Recurring revenue',
     tagStyle: 'bg-orange-50 text-orange-600 border-orange-100',
     dotColor: 'bg-orange-400',
@@ -26,7 +26,7 @@ const blocks = [
   },
   {
     title: 'Community impact built into growth',
-    body: 'Social impact is a result of commercial success, not a separate goal. Community benefit mechanisms are aligned with platform growth — better trade outcomes for users directly strengthen d\'Market\'s market position.',
+    body: 'Social impact is a result of commercial success, not a separate goal. Community benefit mechanisms are aligned with platform growth - better trade outcomes for users directly strengthen d\'Market\'s market position.',
     tag: 'Impact-aligned',
     tagStyle: 'bg-green-50 text-green-700 border-green-100',
     dotColor: 'bg-green-500',
@@ -43,9 +43,7 @@ const blocks = [
 
       <!-- Header -->
       <div class="max-w-3xl mx-auto text-center reveal mb-16">
-        <p class="text-xs font-bold tracking-[0.12em] uppercase text-charcoal-500 mb-4">
-          Business model
-        </p>
+
         <h2 class="text-3xl lg:text-5xl font-extrabold text-charcoal-950 tracking-tight leading-[1.08]">
           Commercially built.<br />Socially meaningful.
         </h2>

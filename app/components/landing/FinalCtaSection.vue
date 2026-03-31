@@ -10,9 +10,6 @@ const { containerRef } = useScrollReveal()
 
       <!-- Header -->
       <div class="max-w-xl mx-auto text-center reveal mb-12">
-        <p class="text-xs font-bold tracking-[0.12em] uppercase text-charcoal-500 mb-4">
-          Get involved
-        </p>
         <h2 class="text-3xl lg:text-5xl font-extrabold text-charcoal-950 tracking-tight leading-[1.08]">
           Join d'Market early
         </h2>
@@ -21,7 +18,7 @@ const { containerRef } = useScrollReveal()
       <!-- Two cards -->
       <div class="grid sm:grid-cols-2 gap-4 lg:gap-5">
 
-        <!-- Trader card — primary -->
+        <!-- Trader card - primary -->
         <div class="reveal relative bg-orange-500 rounded-2xl p-8 lg:p-10 overflow-hidden flex flex-col hover:-translate-y-1 transition-all duration-300" style="transition-delay: 100ms;">
           <!-- Subtle background texture -->
           <div
@@ -51,7 +48,7 @@ const { containerRef } = useScrollReveal()
           </div>
         </div>
 
-        <!-- Investor card — secondary -->
+        <!-- Investor card - secondary -->
         <div id="investor" class="reveal relative bg-charcoal-950 rounded-2xl p-8 lg:p-10 overflow-hidden flex flex-col hover:-translate-y-1 transition-all duration-300" style="transition-delay: 200ms;">
           <!-- Subtle glow -->
           <div
@@ -69,15 +66,6 @@ const { containerRef } = useScrollReveal()
             We are engaging aligned investors and experienced advisors for the next stage of growth. If you share our conviction in local African commerce, we'd like to hear from you.
           </p>
           <div class="mt-8 flex flex-col gap-3">
-            <a
-              href="#"
-              class="inline-flex items-center gap-2 px-6 py-3 text-sm font-bold text-white border border-charcoal-600 hover:border-charcoal-400 hover:bg-charcoal-900 rounded-xl transition-all duration-150 self-start"
-            >
-              Investor / NED interest
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-              </svg>
-            </a>
             <!-- SEIS reassurance -->
             <div class="flex items-center gap-2">
               <svg class="w-3.5 h-3.5 text-green-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 12 12" aria-hidden="true">
@@ -85,6 +73,16 @@ const { containerRef } = useScrollReveal()
               </svg>
               <span class="text-xs text-charcoal-400">SEIS Advance Assurance granted</span>
             </div>
+            <a
+              href="#"
+              class="inline-flex items-center gap-2 px-6 py-3 text-sm font-bold bg-charcoal-500 hover:bg-charcoal-400 text-white rounded-xl transition-all duration-150 self-start shadow-lg shadow-charcoal-500/30"
+            >
+              Investor / NED interest
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+              </svg>
+            </a>
+
           </div>
         </div>
 

@@ -77,7 +77,7 @@ const categories = [
 
       <!-- Supporting line -->
       <p class="text-center text-sm text-charcoal-500 italic mt-12">
-        Built for the way communities already trade — with better visibility, trust and reach.
+        Built for the way communities already trade - with better visibility, trust and reach.
       </p>
 
     </div>

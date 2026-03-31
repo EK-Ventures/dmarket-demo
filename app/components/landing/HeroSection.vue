@@ -17,7 +17,7 @@ import photoSaleswoman from '~/assets/img/photo/attractive-african-saleswoman-fr
       style="background: radial-gradient(ellipse, rgba(45,137,149,0.10) 0%, transparent 70%); transform: translate(-30%, 20%); animation-delay: 2s;"
     />
 
-    <!-- Content — extra pb to clear the diagonal separator -->
+    <!-- Content - extra pb to clear the diagonal separator -->
     <div class="relative max-w-7xl mx-auto px-5 lg:px-8 pt-20 lg:pt-28 pb-32 lg:pb-40">
       <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
@@ -34,7 +34,7 @@ import photoSaleswoman from '~/assets/img/photo/attractive-african-saleswoman-fr
 
           <!-- Headline -->
           <h1 class="hero-anim-2 text-5xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.03]">
-            Buy local —<br />Sell big.
+            Buy local -<br />Sell big.
           </h1>
 
           <!-- Body -->
@@ -52,9 +52,9 @@ import photoSaleswoman from '~/assets/img/photo/attractive-african-saleswoman-fr
             </a>
             <a
               href="#validation"
-              class="inline-flex items-center gap-2.5 px-5 py-3 text-base font-semibold text-white/90 hover:text-white border border-white/25 hover:border-white/50 rounded-xl transition-all duration-200 hover:-translate-y-0.5"
+              class="inline-flex items-center gap-2.5 px-5 py-3 text-base font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/40 hover:border-white/70 rounded-xl transition-all duration-200 hover:-translate-y-0.5"
             >
-              <span class="flex-shrink-0 w-6 h-6 rounded-full bg-white/15 border border-white/20 flex items-center justify-center">
+              <span class="flex-shrink-0 w-6 h-6 rounded-full bg-white/20 border border-white/40 flex items-center justify-center">
                 <svg class="w-2.5 h-2.5 text-white ml-px" viewBox="0 0 10 12" fill="currentColor" aria-hidden="true">
                   <path d="M0 0l10 6L0 12V0z" />
                 </svg>

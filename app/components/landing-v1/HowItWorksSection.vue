@@ -36,7 +36,7 @@ const steps = [
 
       <!-- Steps -->
       <div class="relative">
-        <!-- Connector line — desktop only -->
+        <!-- Connector line - desktop only -->
         <div
           class="hidden md:block absolute top-[2.875rem] left-[14%] right-[14%] h-px bg-charcoal-200"
           aria-hidden="true"

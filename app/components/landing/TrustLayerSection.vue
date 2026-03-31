@@ -16,17 +16,17 @@ const features = [
   },
   {
     title: 'Integrity-led incentives',
-    body: 'Traders who consistently deliver are rewarded with higher visibility and platform benefits — aligning incentives with good behaviour.',
+    body: 'Traders who consistently deliver are rewarded with higher visibility and platform benefits - aligning incentives with good behaviour.',
     icon: '<path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />',
   },
   {
     title: 'Visibility for reliable sellers',
-    body: 'Reputation directly influences discoverability — the more consistently you trade, the more buyers can find you.',
+    body: 'Reputation directly influences discoverability - the more consistently you trade, the more buyers can find you.',
     icon: '<path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />',
   },
   {
     title: 'Transparent trading history',
-    body: 'Buyers can see a trader\'s activity history before engaging — reducing uncertainty and building confidence in local commerce.',
+    body: 'Buyers can see a trader\'s activity history before engaging - reducing uncertainty and building confidence in local commerce.',
     icon: '<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5m.75-9 3-3 2.148 2.148A12.061 12.061 0 0 1 16.5 7.605" />',
   },
 ]
@@ -39,9 +39,6 @@ const features = [
 
         <!-- ── Left: Copy ── -->
         <div class="reveal reveal-left lg:sticky lg:top-28">
-          <p class="text-xs font-bold tracking-[0.12em] uppercase text-charcoal-400 mb-4">
-            Trust layer
-          </p>
           <h2 class="text-3xl lg:text-5xl font-extrabold text-white tracking-tight leading-[1.08]">
             Trust is part of the product
           </h2>

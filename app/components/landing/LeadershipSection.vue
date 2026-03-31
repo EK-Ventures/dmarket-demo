@@ -21,7 +21,7 @@ const capabilities = [
   },
   {
     title: 'Cross-regional perspective, UK governance',
-    body: 'Networks and working experience spanning Sub-Saharan Africa, the UK and Europe — combined with a UK-incorporated governance structure and regulatory discipline.',
+    body: 'Networks and working experience spanning Sub-Saharan Africa, the UK and Europe - combined with a UK-incorporated governance structure and regulatory discipline.',
     icon: '<path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253M3.157 7.582A8.959 8.959 0 0 0 3 12c0 .778.099 1.533.284 2.253" />',
   },
 ]
@@ -34,9 +34,7 @@ const capabilities = [
 
         <!-- ── Left: Copy ── -->
         <div class="reveal reveal-left lg:sticky lg:top-28">
-          <p class="text-xs font-bold tracking-[0.12em] uppercase text-charcoal-400 mb-4">
-            Leadership &amp; governance
-          </p>
+
           <h2 class="text-3xl lg:text-5xl font-extrabold text-white tracking-tight leading-[1.08]">
             Built with execution discipline
           </h2>

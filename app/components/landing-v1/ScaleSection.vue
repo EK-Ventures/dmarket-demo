@@ -13,7 +13,7 @@ const blocks = [
   {
     icon: 'i-heroicons-arrow-trending-up',
     title: 'Community impact built into growth',
-    body: 'Impact is a structural outcome of the model — not a marketing layer. Growth directly benefits the communities it serves.',
+    body: 'Impact is a structural outcome of the model - not a marketing layer. Growth directly benefits the communities it serves.',
   },
 ]
 </script>

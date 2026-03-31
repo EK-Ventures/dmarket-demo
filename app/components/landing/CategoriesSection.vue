@@ -12,19 +12,19 @@ const categories = [
     title: 'Fresh produce',
     body: 'For market sellers managing perishable stock and daily demand.',
     photo: photoProduce,
-    alt: 'Women browsing fresh fruit and vegetables at a vibrant outdoor market stall — warm, natural light',
+    alt: 'Women browsing fresh fruit and vegetables at a vibrant outdoor market stall - warm, natural light',
   },
   {
     title: 'Goods',
     body: 'For household items, packaged products and everyday essentials.',
     photo: photoGoods,
-    alt: 'African woman holding everyday household goods at a local market — authentic, documentary style',
+    alt: 'African woman holding everyday household goods at a local market - authentic, documentary style',
   },
   {
     title: 'Handyman & local services',
     body: 'For trusted neighbourhood services people need quickly.',
     photo: photoServices,
-    alt: 'African market woman using a mobile phone and pointing at the camera — engaging, connected, local commerce',
+    alt: 'African market woman using a mobile phone and pointing at the camera - engaging, connected, local commerce',
   },
 ]
 </script>
@@ -36,15 +36,12 @@ const categories = [
       <!-- Header -->
       <div class="reveal flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12">
         <div class="max-w-xl">
-          <p class="text-xs font-bold tracking-[0.12em] uppercase text-charcoal-500 mb-4">
-            Marketplace categories
-          </p>
           <h2 class="text-3xl lg:text-5xl font-extrabold text-charcoal-950 tracking-tight leading-[1.08]">
             One platform.<br />Everyday local commerce.
           </h2>
         </div>
         <p class="text-sm text-neutral-500 max-w-xs lg:text-right leading-relaxed lg:pb-1">
-          Built for the way communities already trade — with better visibility, trust and reach.
+          Built for the way communities already trade - with better visibility, trust and reach.
         </p>
       </div>
 

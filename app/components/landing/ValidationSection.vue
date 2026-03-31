@@ -26,9 +26,6 @@ const quotes = [
 
       <!-- Header -->
       <div class="max-w-3xl mx-auto text-center reveal mb-12">
-        <p class="text-xs font-bold tracking-[0.12em] uppercase text-charcoal-500 mb-4">
-          Field validation
-        </p>
         <h2 class="text-3xl lg:text-5xl font-extrabold text-charcoal-950 tracking-tight leading-[1.08]">
           Built from real conversations in-market
         </h2>
@@ -45,7 +42,7 @@ const quotes = [
           <!-- Thumbnail photo -->
           <img
             :src="photoThumbnail"
-            alt="African businesswoman at a local market smiling while using a smartphone — field validation interview still"
+            alt="African businesswoman at a local market smiling while using a smartphone - field validation interview still"
             class="absolute inset-0 w-full h-full object-cover opacity-55 group-hover:opacity-65 transition-opacity duration-300"
           />
 

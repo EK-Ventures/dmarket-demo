@@ -7,7 +7,7 @@ const steps = [
   {
     label: 'Step 01',
     title: 'List what you sell or offer',
-    body: 'Fresh produce, household goods, or local services — add your listing in minutes.',
+    body: 'Fresh produce, household goods, or local services - add your listing in minutes.',
     icon: '<path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2m-6 9 2 2 4-4" />',
   },
   {
@@ -37,9 +37,7 @@ const steps = [
 
       <!-- Header -->
       <div class="max-w-2xl mx-auto text-center reveal">
-        <p class="text-xs font-bold tracking-[0.12em] uppercase text-charcoal-500 mb-4">
-          How it works
-        </p>
+
         <h2 class="text-3xl lg:text-5xl font-extrabold text-charcoal-950 tracking-tight leading-[1.08]">
           Simple to use. Built for everyday trade.
         </h2>

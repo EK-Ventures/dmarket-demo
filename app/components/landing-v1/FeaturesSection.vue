@@ -3,7 +3,7 @@ const cards = [
   {
     icon: 'i-heroicons-map-pin',
     title: 'Sell locally',
-    body: 'Help informal traders reach more buyers nearby — without complicated logistics or upfront costs.',
+    body: 'Help informal traders reach more buyers nearby - without complicated logistics or upfront costs.',
   },
   {
     icon: 'i-heroicons-magnifying-glass',

@@ -6,7 +6,7 @@
 @theme {
   --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
 
-  /* Brand Orange — Primary action & energy (#F48011) */
+  /* Brand Orange - Primary action & energy (#F48011) */
   --color-orange-50:  #fff7ed;
   --color-orange-100: #feedcc;
   --color-orange-200: #fcd89a;
@@ -18,7 +18,7 @@
   --color-orange-800: #6a3306;
   --color-orange-900: #3d1d03;
 
-  /* Trust Green — Secondary action & success (#0BAE5F) */
+  /* Trust Green - Secondary action & success (#0BAE5F) */
   --color-green-50:  #edfaf4;
   --color-green-100: #d0f3e4;
   --color-green-200: #a1e7ca;
@@ -30,7 +30,7 @@
   --color-green-800: #054f2b;
   --color-green-900: #033019;
 
-  /* Institutional Charcoal — Text & authority (#2D8995) */
+  /* Institutional Charcoal - Text & authority (#2D8995) */
   --color-charcoal-50:  #eef7f8;
   --color-charcoal-100: #d2ecee;
   --color-charcoal-200: #a6d9dd;

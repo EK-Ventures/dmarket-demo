@@ -26,7 +26,7 @@ const quotes = [
       <div class="relative aspect-video rounded-2xl overflow-hidden group cursor-pointer">
         <img
           :src="videoThumbnail"
-          alt="Market trader using a smartphone — still from field validation interviews"
+          alt="Market trader using a smartphone - still from field validation interviews"
           class="absolute inset-0 w-full h-full object-cover object-center"
           loading="lazy"
         />
@@ -42,7 +42,7 @@ const quotes = [
 
       <!-- Watch link -->
       <p class="text-center text-xs text-charcoal-400 mt-3">
-        Video coming soon — field interviews with traders and buyers across target markets
+        Video coming soon - field interviews with traders and buyers across target markets
       </p>
 
       <!-- Quotes -->
