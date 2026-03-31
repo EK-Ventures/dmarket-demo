@@ -1,48 +1,47 @@
-<script setup lang="ts">
+<script setup>
 const signals = [
-  {
-    icon: 'i-heroicons-building-office-2',
-    label: 'UK-based company',
-  },
-  {
-    icon: 'i-heroicons-users',
-    label: 'Experienced founding team',
-  },
-  {
-    icon: 'i-heroicons-clipboard-document-check',
-    label: 'Primary market validation completed',
-  },
-  {
-    icon: 'i-heroicons-globe-alt',
-    label: 'Built for scalable multi-country rollout',
-  },
-  {
-    icon: 'i-heroicons-shield-check',
-    label: 'SEIS Advance Assurance granted',
-  },
+  'UK-based company',
+  'Experienced founding team',
+  'Primary market validation completed',
+  'Built for scalable multi-country rollout',
+  'SEIS Advance Assurance granted',
 ]
 </script>
 
 <template>
-  <section class="bg-warm-grey border-y border-charcoal-100 py-12 lg:py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <ul
-        class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-6"
-        role="list"
-      >
-        <li
-          v-for="signal in signals"
-          :key="signal.label"
-          class="flex flex-col items-center text-center"
-        >
-          <div class="w-11 h-11 rounded-full bg-orange-50 flex items-center justify-center flex-shrink-0">
-            <UIcon :name="signal.icon" class="size-5 text-orange-500" />
+  <section class="bg-warm-grey border-y border-neutral-200" aria-label="Credibility signals">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8 py-5 lg:py-6">
+      <div class="flex flex-wrap justify-center items-center gap-x-0 gap-y-3">
+
+        <template v-for="(signal, i) in signals" :key="signal">
+
+          <div class="flex items-center gap-2 px-4 lg:px-5">
+            <!-- Checkmark icon -->
+            <svg
+              class="w-3.5 h-3.5 text-charcoal-500 flex-shrink-0"
+              viewBox="0 0 14 14"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <polyline points="2 7 6 11 12 3" />
+            </svg>
+            <span class="text-sm font-medium text-charcoal-800 whitespace-nowrap">{{ signal }}</span>
           </div>
-          <p class="text-sm font-semibold text-charcoal-700 mt-3 leading-snug">
-            {{ signal.label }}
-          </p>
-        </li>
-      </ul>
+
+          <!-- Vertical divider between items (desktop only) -->
+          <span
+            v-if="i < signals.length - 1"
+            class="hidden lg:block w-px h-3.5 bg-neutral-300 flex-shrink-0"
+            aria-hidden="true"
+          />
+
+        </template>
+
+      </div>
     </div>
   </section>
 </template>

@@ -1,71 +1,131 @@
-<script setup lang="ts">
-import heroPhoto from '~/assets/img/photo/excited-african-market-woman-using-mobile-phone.jpg'
+<script setup>
+import photoMain from '~/assets/img/photo/excited-african-market-woman-using-mobile-phone.jpg'
+import photoCountingMoney from '~/assets/img/photo/african-market-man-selling-fruits-items-counting-money.jpg'
+import photoSaleswoman from '~/assets/img/photo/attractive-african-saleswoman-fruit-stand-with-folded-arms.jpg'
 </script>
 
 <template>
-  <section class="relative min-h-screen flex items-center bg-white pt-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-8 pb-20 lg:py-28">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+  <section class="relative bg-charcoal-950 overflow-hidden">
 
-        <!-- Left: copy -->
-        <div class="space-y-7 lg:space-y-8">
+    <!-- Ambient background glows -->
+    <div
+      class="absolute top-0 right-0 w-[900px] h-[600px] rounded-full blur-[140px] pointer-events-none"
+      style="background: radial-gradient(ellipse, rgba(244,128,17,0.07) 0%, transparent 70%); transform: translate(30%, -20%);"
+    />
+    <div
+      class="absolute bottom-0 left-0 w-[700px] h-[500px] rounded-full blur-[120px] pointer-events-none"
+      style="background: radial-gradient(ellipse, rgba(45,137,149,0.08) 0%, transparent 70%); transform: translate(-30%, 20%);"
+    />
+
+    <!-- Content — extra pb to clear the diagonal separator -->
+    <div class="relative max-w-7xl mx-auto px-5 lg:px-8 pt-20 lg:pt-28 pb-32 lg:pb-40">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+        <!-- ── Left: Copy ── -->
+        <div>
 
           <!-- Eyebrow -->
-          <p class="text-green-600 font-medium italic text-sm sm:text-base">
-            Mobile marketplace for local trade across Sub-Saharan Africa
-          </p>
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-green-500/30 bg-green-500/10 mb-8">
+            <span class="w-1.5 h-1.5 rounded-full bg-green-400 flex-shrink-0" />
+            <span class="text-green-400 text-xs font-semibold tracking-wider uppercase leading-none">
+              Mobile marketplace for local trade across Sub-Saharan Africa
+            </span>
+          </div>
 
           <!-- Headline -->
-          <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold text-charcoal-900 tracking-tight leading-[1.05]">
-            Buy local.<br>Sell big.
+          <h1 class="text-5xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.03]">
+            Buy local —<br />Sell big.
           </h1>
 
-          <!-- Supporting copy -->
-          <p class="text-base sm:text-lg text-charcoal-600 leading-relaxed max-w-lg">
+          <!-- Body -->
+          <p class="mt-6 text-lg text-neutral-200 leading-relaxed max-w-lg">
             Designed for informal traders and everyday buyers, d'Market helps people discover nearby products and services, build trust through reputation, and grow local trade through mobile-first commerce.
           </p>
 
           <!-- CTAs -->
-          <div class="flex flex-col sm:flex-row gap-3 pt-1">
+          <div class="mt-9 flex flex-wrap items-center gap-3">
             <a
               href="#register"
-              class="inline-flex justify-center items-center px-6 py-3 rounded-xl text-sm font-medium text-white bg-orange-500 hover:bg-orange-600 transition-colors duration-150"
+              class="inline-flex items-center px-6 py-3 text-base font-semibold bg-orange-500 hover:bg-orange-600 text-white rounded-xl transition-colors duration-150 shadow-lg shadow-orange-500/25"
             >
               Register your interest
             </a>
-            <button
-              type="button"
-              class="inline-flex justify-center items-center gap-2 px-6 py-3 rounded-xl text-sm font-medium text-charcoal-700 border border-charcoal-200 hover:bg-charcoal-50 transition-colors duration-150"
+            <a
+              href="#validation"
+              class="inline-flex items-center gap-2.5 px-5 py-3 text-base font-semibold text-white/90 hover:text-white border border-white/25 hover:border-white/50 rounded-xl transition-all duration-150"
             >
-              <UIcon name="i-heroicons-play-circle" class="size-5 text-orange-500" />
+              <span class="flex-shrink-0 w-6 h-6 rounded-full bg-white/15 border border-white/20 flex items-center justify-center">
+                <svg class="w-2.5 h-2.5 text-white ml-px" viewBox="0 0 10 12" fill="currentColor" aria-hidden="true">
+                  <path d="M0 0l10 6L0 12V0z" />
+                </svg>
+              </span>
               Watch validation video
-            </button>
+            </a>
           </div>
 
           <!-- Trust signals -->
-          <div class="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs text-charcoal-400 pt-1">
-            <span>UK-based venture</span>
-            <span aria-hidden="true">·</span>
-            <span>Research-led</span>
-            <span aria-hidden="true">·</span>
-            <span>SEIS Advance Assurance granted</span>
+          <div class="mt-9 flex flex-wrap items-center gap-x-3 gap-y-2">
+            <span class="text-sm font-medium text-neutral-300">UK-based venture</span>
+            <span class="w-1 h-1 rounded-full bg-neutral-600 flex-shrink-0" />
+            <span class="text-sm font-medium text-neutral-300">Research-led</span>
+            <span class="w-1 h-1 rounded-full bg-neutral-600 flex-shrink-0" />
+            <span class="text-sm font-medium text-neutral-300">SEIS Advance Assurance granted</span>
           </div>
 
         </div>
 
-        <!-- Right: photo -->
-        <div class="relative order-first lg:order-last">
-          <!-- Offset accent block -->
-          <div class="absolute inset-0 bg-orange-500 rounded-3xl translate-x-4 translate-y-4 opacity-15" aria-hidden="true" />
-          <!-- Photo -->
-          <img
-            :src="heroPhoto"
-            alt="A market trader in Sub-Saharan Africa using her mobile phone to connect with buyers"
-            class="relative w-full h-72 sm:h-96 lg:h-[580px] object-cover rounded-3xl shadow-md"
-          />
+        <!-- ── Right: Photo collage (desktop) ── -->
+        <div class="hidden lg:block">
+          <div class="relative flex gap-3 h-[560px]">
+            <!-- Main tall photo -->
+            <div class="relative flex-[1.1] rounded-2xl overflow-hidden ring-1 ring-white/[0.08] shadow-2xl">
+              <img
+                :src="photoMain"
+                alt="Female market trader smiling while using a mobile phone at a vibrant local market stall, warm natural light"
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/30 to-transparent pointer-events-none" />
+            </div>
+            <!-- Right column: two stacked photos, offset down -->
+            <div class="flex-1 flex flex-col gap-3 pt-10">
+              <div class="flex-1 rounded-2xl overflow-hidden ring-1 ring-white/[0.08] shadow-2xl">
+                <img
+                  :src="photoCountingMoney"
+                  alt="Male market vendor counting money beside a colourful fruit display, authentic local market scene"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="flex-1 rounded-2xl overflow-hidden ring-1 ring-white/[0.08] shadow-2xl">
+                <img
+                  :src="photoSaleswoman"
+                  alt="African saleswoman standing confidently with folded arms at her fruit stand"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Mobile: Single photo below copy ── -->
+        <div class="lg:hidden mt-2">
+          <div class="rounded-2xl overflow-hidden ring-1 ring-white/[0.08] shadow-2xl aspect-[4/3]">
+            <img
+              :src="photoMain"
+              alt="Female market trader using a mobile phone at a local market stall"
+              class="w-full h-full object-cover"
+            />
+          </div>
         </div>
 
       </div>
     </div>
+
+    <!-- ── Diagonal separator → warm-grey ── -->
+    <div class="absolute bottom-0 inset-x-0 h-16 lg:h-20 pointer-events-none" aria-hidden="true">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+        <polygon points="0,60 1440,0 1440,80 0,80" fill="#f5f3ef"/>
+      </svg>
+    </div>
+
   </section>
 </template>
