@@ -1,5 +1,8 @@
 <script setup>
+import { useScrollReveal } from '~/composables/useScrollReveal'
 import photoThumbnail from '~/assets/img/photo/young-black-african-businesswoman-local-market-smiling-browsing-online-using-smartphone-checking-reading-news-online-holding-apple.jpg'
+
+const { containerRef } = useScrollReveal()
 
 const quotes = [
   {
@@ -18,11 +21,11 @@ const quotes = [
 </script>
 
 <template>
-  <section class="bg-warm-grey py-20 lg:py-28" id="validation">
+  <section ref="containerRef" class="bg-warm-grey py-20 lg:py-28" id="validation">
     <div class="max-w-7xl mx-auto px-5 lg:px-8">
 
       <!-- Header -->
-      <div class="max-w-3xl mb-12">
+      <div class="max-w-3xl mx-auto text-center reveal mb-12">
         <p class="text-xs font-bold tracking-[0.12em] uppercase text-charcoal-500 mb-4">
           Field validation
         </p>
@@ -38,7 +41,7 @@ const quotes = [
       <div class="grid lg:grid-cols-[1.4fr_1fr] gap-6 lg:gap-8 items-start">
 
         <!-- Video placeholder -->
-        <div class="relative rounded-2xl overflow-hidden bg-charcoal-900 shadow-xl group cursor-pointer aspect-video lg:aspect-auto lg:h-full lg:min-h-[340px]">
+        <div class="reveal relative rounded-2xl overflow-hidden bg-charcoal-900 shadow-xl group cursor-pointer aspect-video lg:aspect-auto lg:h-full lg:min-h-[340px]" style="transition-delay: 100ms;">
           <!-- Thumbnail photo -->
           <img
             :src="photoThumbnail"
@@ -51,8 +54,8 @@ const quotes = [
 
           <!-- Play button -->
           <div class="absolute inset-0 flex items-center justify-center">
-            <div class="w-16 h-16 rounded-full bg-white/95 group-hover:bg-white group-hover:scale-105 flex items-center justify-center shadow-2xl transition-all duration-200">
-              <svg class="w-6 h-6 text-charcoal-900 ml-1" viewBox="0 0 20 24" fill="currentColor" aria-hidden="true">
+            <div class="w-20 h-20 rounded-full bg-white/95 group-hover:bg-white group-hover:scale-110 flex items-center justify-center shadow-2xl transition-all duration-300">
+              <svg class="w-8 h-8 text-charcoal-900 ml-1.5" viewBox="0 0 20 24" fill="currentColor" aria-hidden="true">
                 <path d="M0 0l20 12L0 24V0z" />
               </svg>
             </div>
@@ -68,9 +71,10 @@ const quotes = [
         <!-- Quotes -->
         <div class="flex flex-col gap-4">
           <blockquote
-            v-for="quote in quotes"
+            v-for="(quote, i) in quotes"
             :key="quote.text"
-            class="bg-white rounded-2xl p-6 border border-neutral-200 shadow-sm"
+            class="reveal bg-white rounded-2xl p-6 border border-neutral-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
+            :style="{ transitionDelay: (i + 1) * 120 + 'ms' }"
           >
             <!-- Large quote mark -->
             <span class="block text-4xl font-black text-orange-200 leading-none mb-2" aria-hidden="true">"</span>
@@ -86,7 +90,7 @@ const quotes = [
       </div>
 
       <!-- CTA + attribution row -->
-      <div class="mt-10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+      <div class="reveal mt-10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4" style="transition-delay: 400ms;">
         <a
           href="#validation"
           class="inline-flex items-center gap-2.5 px-5 py-3 text-sm font-semibold text-neutral-900 border border-neutral-400 hover:border-neutral-700 hover:bg-white rounded-xl transition-all duration-150 self-start"

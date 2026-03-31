@@ -1,4 +1,8 @@
 <script setup>
+import { useScrollReveal } from '~/composables/useScrollReveal'
+
+const { containerRef } = useScrollReveal()
+
 const pillars = [
   {
     title: 'Sell locally',
@@ -25,36 +29,33 @@ const accentMap = {
     bg: 'bg-orange-50',
     border: 'border-orange-100',
     icon: 'text-orange-500',
-    tag: 'bg-orange-500/8 text-orange-600 border-orange-200/60',
   },
   teal: {
     bg: 'bg-charcoal-50',
     border: 'border-charcoal-100',
     icon: 'text-charcoal-500',
-    tag: 'bg-charcoal-500/8 text-charcoal-600 border-charcoal-200/60',
   },
   green: {
     bg: 'bg-green-50',
     border: 'border-green-100',
     icon: 'text-green-600',
-    tag: 'bg-green-500/8 text-green-700 border-green-200/60',
   },
 }
 </script>
 
 <template>
-  <section class="bg-white py-20 lg:py-28">
+  <section ref="containerRef" class="bg-white py-20 lg:py-28">
     <div class="max-w-7xl mx-auto px-5 lg:px-8">
 
       <!-- Header -->
-      <div class="max-w-3xl">
+      <div class="max-w-3xl mx-auto text-center reveal">
         <p class="text-xs font-bold tracking-[0.12em] uppercase text-charcoal-500 mb-4">
           What d'Market is
         </p>
         <h2 class="text-3xl lg:text-5xl font-extrabold text-charcoal-950 tracking-tight leading-[1.08]">
-          A marketplace built for<br class="hidden lg:block" /> real-world local trade
+          A marketplace built for real-world local trade
         </h2>
-        <p class="mt-5 text-lg text-neutral-700 leading-relaxed max-w-2xl">
+        <p class="mt-5 text-lg text-neutral-700 leading-relaxed">
           d'Market is not a traditional ecommerce or logistics-heavy delivery platform. It helps people discover nearby sellers, products and services in real time — so digital discovery leads to trusted local, in-person trade.
         </p>
       </div>
@@ -62,22 +63,23 @@ const accentMap = {
       <!-- Pillar cards -->
       <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
         <div
-          v-for="pillar in pillars"
+          v-for="(pillar, i) in pillars"
           :key="pillar.title"
-          class="group relative rounded-2xl border border-neutral-200 bg-white p-7 lg:p-8 shadow-sm hover:shadow-md hover:border-neutral-300 transition-all duration-200"
+          class="reveal group relative rounded-2xl border border-neutral-200 bg-white p-7 lg:p-8 shadow-sm hover:shadow-lg hover:border-neutral-300 hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center"
+          :style="{ transitionDelay: i * 120 + 'ms' }"
         >
 
           <!-- Icon -->
           <div
-            class="w-11 h-11 rounded-xl border flex items-center justify-center mb-6"
+            class="w-20 h-20 rounded-2xl border flex items-center justify-center mb-7"
             :class="[accentMap[pillar.accent].bg, accentMap[pillar.accent].border]"
           >
             <svg
-              class="w-5 h-5"
+              class="w-10 h-10"
               :class="accentMap[pillar.accent].icon"
               fill="none"
               stroke="currentColor"
-              stroke-width="1.75"
+              stroke-width="1.5"
               viewBox="0 0 24 24"
               aria-hidden="true"
               v-html="pillar.icon"

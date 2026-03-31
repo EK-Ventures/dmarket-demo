@@ -1,10 +1,45 @@
+<script setup>
+import { useScrollReveal } from '~/composables/useScrollReveal'
+import { useCountUp } from '~/composables/useCountUp'
+
+const { containerRef } = useScrollReveal()
+
+const statValues = ['1.2bn', '660m', '~460m']
+const { animated: animatedStats, containerRef: statsRef } = useCountUp(statValues)
+
+const stats = [
+  {
+    label: 'Population across Sub-Saharan Africa',
+    note: 'One of the fastest-growing and youngest consumer markets in the world.',
+    featured: true,
+  },
+  {
+    label: 'Workers in the informal economy',
+    note: 'The majority of daily trade happens outside formal digital infrastructure.',
+    featured: false,
+  },
+  {
+    label: 'Smartphone users and growing',
+    note: 'Mobile-first behaviour is already the norm — the infrastructure gap is the opportunity.',
+    featured: false,
+  },
+]
+
+const tags = [
+  'High-growth market',
+  'Mobile-first behaviour',
+  'Underserved by existing platforms',
+  'Pre-seed stage',
+]
+</script>
+
 <template>
-  <section class="bg-white py-20 lg:py-28" id="for-investors">
+  <section ref="containerRef" class="bg-white py-20 lg:py-28" id="for-investors">
     <div class="max-w-7xl mx-auto px-5 lg:px-8">
       <div class="grid lg:grid-cols-[1fr_420px] gap-16 lg:gap-20 items-center">
 
         <!-- ── Left: Narrative ── -->
-        <div>
+        <div class="reveal reveal-left">
           <p class="text-xs font-bold tracking-[0.12em] uppercase text-charcoal-500 mb-4">
             Why this market, why now
           </p>
@@ -28,14 +63,15 @@
         </div>
 
         <!-- ── Right: Stat tiles ── -->
-        <div class="flex flex-col gap-4">
+        <div ref="statsRef" class="flex flex-col gap-4">
           <div
-            v-for="stat in stats"
-            :key="stat.value"
-            class="relative rounded-2xl border p-6 overflow-hidden"
+            v-for="(stat, i) in stats"
+            :key="statValues[i]"
+            class="reveal relative rounded-2xl border p-6 overflow-hidden hover:-translate-y-0.5 transition-all duration-300"
             :class="stat.featured
               ? 'bg-charcoal-950 border-charcoal-800'
-              : 'bg-white border-neutral-200 shadow-sm'"
+              : 'bg-white border-neutral-200 shadow-sm hover:shadow-md'"
+            :style="{ transitionDelay: i * 120 + 'ms' }"
           >
             <!-- Subtle top accent line -->
             <div
@@ -44,10 +80,10 @@
             />
 
             <p
-              class="text-4xl lg:text-5xl font-black tracking-tight leading-none"
+              class="text-4xl lg:text-5xl font-black tracking-tight leading-none tabular-nums"
               :class="stat.featured ? 'text-white' : 'text-charcoal-950'"
             >
-              {{ stat.value }}
+              {{ animatedStats[i] }}
             </p>
             <p
               class="mt-2 text-base font-semibold"
@@ -68,33 +104,3 @@
     </div>
   </section>
 </template>
-
-<script setup>
-const stats = [
-  {
-    value: '1.2bn',
-    label: 'Population across Sub-Saharan Africa',
-    note: 'One of the fastest-growing and youngest consumer markets in the world.',
-    featured: true,
-  },
-  {
-    value: '660m',
-    label: 'Workers in the informal economy',
-    note: 'The majority of daily trade happens outside formal digital infrastructure.',
-    featured: false,
-  },
-  {
-    value: '~460m',
-    label: 'Smartphone users and growing',
-    note: 'Mobile-first behaviour is already the norm — the infrastructure gap is the opportunity.',
-    featured: false,
-  },
-]
-
-const tags = [
-  'High-growth market',
-  'Mobile-first behaviour',
-  'Underserved by existing platforms',
-  'Pre-seed stage',
-]
-</script>

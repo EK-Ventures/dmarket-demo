@@ -9,12 +9,12 @@ import photoSaleswoman from '~/assets/img/photo/attractive-african-saleswoman-fr
 
     <!-- Ambient background glows -->
     <div
-      class="absolute top-0 right-0 w-[900px] h-[600px] rounded-full blur-[140px] pointer-events-none"
-      style="background: radial-gradient(ellipse, rgba(244,128,17,0.07) 0%, transparent 70%); transform: translate(30%, -20%);"
+      class="hero-glow-pulse absolute top-0 right-0 w-[900px] h-[600px] rounded-full blur-[140px] pointer-events-none"
+      style="background: radial-gradient(ellipse, rgba(244,128,17,0.09) 0%, transparent 70%); transform: translate(30%, -20%);"
     />
     <div
-      class="absolute bottom-0 left-0 w-[700px] h-[500px] rounded-full blur-[120px] pointer-events-none"
-      style="background: radial-gradient(ellipse, rgba(45,137,149,0.08) 0%, transparent 70%); transform: translate(-30%, 20%);"
+      class="hero-glow-pulse absolute bottom-0 left-0 w-[700px] h-[500px] rounded-full blur-[120px] pointer-events-none"
+      style="background: radial-gradient(ellipse, rgba(45,137,149,0.10) 0%, transparent 70%); transform: translate(-30%, 20%); animation-delay: 2s;"
     />
 
     <!-- Content — extra pb to clear the diagonal separator -->
@@ -25,7 +25,7 @@ import photoSaleswoman from '~/assets/img/photo/attractive-african-saleswoman-fr
         <div>
 
           <!-- Eyebrow -->
-          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-green-500/30 bg-green-500/10 mb-8">
+          <div class="hero-anim-1 inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-green-500/30 bg-green-500/10 mb-8">
             <span class="w-1.5 h-1.5 rounded-full bg-green-400 flex-shrink-0" />
             <span class="text-green-400 text-xs font-semibold tracking-wider uppercase leading-none">
               Mobile marketplace for local trade across Sub-Saharan Africa
@@ -33,26 +33,26 @@ import photoSaleswoman from '~/assets/img/photo/attractive-african-saleswoman-fr
           </div>
 
           <!-- Headline -->
-          <h1 class="text-5xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.03]">
+          <h1 class="hero-anim-2 text-5xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.03]">
             Buy local —<br />Sell big.
           </h1>
 
           <!-- Body -->
-          <p class="mt-6 text-lg text-neutral-200 leading-relaxed max-w-lg">
+          <p class="hero-anim-3 mt-6 text-lg text-neutral-200 leading-relaxed max-w-lg">
             Designed for informal traders and everyday buyers, d'Market helps people discover nearby products and services, build trust through reputation, and grow local trade through mobile-first commerce.
           </p>
 
           <!-- CTAs -->
-          <div class="mt-9 flex flex-wrap items-center gap-3">
+          <div class="hero-anim-4 mt-9 flex flex-wrap items-center gap-3">
             <a
               href="#register"
-              class="inline-flex items-center px-6 py-3 text-base font-semibold bg-orange-500 hover:bg-orange-600 text-white rounded-xl transition-colors duration-150 shadow-lg shadow-orange-500/25"
+              class="inline-flex items-center px-6 py-3 text-base font-semibold bg-orange-500 hover:bg-orange-600 text-white rounded-xl transition-all duration-200 shadow-lg shadow-orange-500/25 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-orange-500/30"
             >
               Register your interest
             </a>
             <a
               href="#validation"
-              class="inline-flex items-center gap-2.5 px-5 py-3 text-base font-semibold text-white/90 hover:text-white border border-white/25 hover:border-white/50 rounded-xl transition-all duration-150"
+              class="inline-flex items-center gap-2.5 px-5 py-3 text-base font-semibold text-white/90 hover:text-white border border-white/25 hover:border-white/50 rounded-xl transition-all duration-200 hover:-translate-y-0.5"
             >
               <span class="flex-shrink-0 w-6 h-6 rounded-full bg-white/15 border border-white/20 flex items-center justify-center">
                 <svg class="w-2.5 h-2.5 text-white ml-px" viewBox="0 0 10 12" fill="currentColor" aria-hidden="true">
@@ -64,7 +64,7 @@ import photoSaleswoman from '~/assets/img/photo/attractive-african-saleswoman-fr
           </div>
 
           <!-- Trust signals -->
-          <div class="mt-9 flex flex-wrap items-center gap-x-3 gap-y-2">
+          <div class="hero-anim-5 mt-9 flex flex-wrap items-center gap-x-3 gap-y-2">
             <span class="text-sm font-medium text-neutral-300">UK-based venture</span>
             <span class="w-1 h-1 rounded-full bg-neutral-600 flex-shrink-0" />
             <span class="text-sm font-medium text-neutral-300">Research-led</span>
@@ -75,7 +75,7 @@ import photoSaleswoman from '~/assets/img/photo/attractive-african-saleswoman-fr
         </div>
 
         <!-- ── Right: Photo collage (desktop) ── -->
-        <div class="hidden lg:block">
+        <div class="hero-anim-photo hidden lg:block">
           <div class="relative flex gap-3 h-[560px]">
             <!-- Main tall photo -->
             <div class="relative flex-[1.1] rounded-2xl overflow-hidden ring-1 ring-white/[0.08] shadow-2xl">

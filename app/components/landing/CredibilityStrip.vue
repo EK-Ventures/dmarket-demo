@@ -1,4 +1,6 @@
 <script setup>
+import { useScrollReveal } from '~/composables/useScrollReveal'
+
 const signals = [
   'UK-based company',
   'Experienced founding team',
@@ -6,19 +8,21 @@ const signals = [
   'Built for scalable multi-country rollout',
   'SEIS Advance Assurance granted',
 ]
+
+const { containerRef } = useScrollReveal()
 </script>
 
 <template>
-  <section class="bg-warm-grey border-y border-neutral-200" aria-label="Credibility signals">
+  <section ref="containerRef" class="bg-warm-grey border-y border-neutral-200" aria-label="Credibility signals">
     <div class="max-w-7xl mx-auto px-5 lg:px-8 py-5 lg:py-6">
-      <div class="flex flex-wrap justify-center items-center gap-x-0 gap-y-3">
+      <div class="reveal flex flex-wrap justify-center items-center gap-x-0 gap-y-3">
 
         <template v-for="(signal, i) in signals" :key="signal">
 
-          <div class="flex items-center gap-2 px-4 lg:px-5">
+          <div class="flex items-center gap-2.5 px-4 lg:px-5">
             <!-- Checkmark icon -->
             <svg
-              class="w-3.5 h-3.5 text-charcoal-500 flex-shrink-0"
+              class="w-5 h-5 text-charcoal-500 flex-shrink-0"
               viewBox="0 0 14 14"
               fill="none"
               stroke="currentColor"

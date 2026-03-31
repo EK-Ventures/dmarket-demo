@@ -1,59 +1,8 @@
-<template>
-  <section class="bg-charcoal-950 py-20 lg:py-28" id="for-traders">
-    <div class="max-w-7xl mx-auto px-5 lg:px-8">
-      <div class="grid lg:grid-cols-2 gap-16 lg:gap-20 items-start">
-
-        <!-- ── Left: Copy ── -->
-        <div class="lg:sticky lg:top-28">
-          <p class="text-xs font-bold tracking-[0.12em] uppercase text-charcoal-400 mb-4">
-            Trust layer
-          </p>
-          <h2 class="text-3xl lg:text-5xl font-extrabold text-white tracking-tight leading-[1.08]">
-            Trust is part of the product
-          </h2>
-          <p class="mt-5 text-lg text-charcoal-200 leading-relaxed">
-            In fragmented local markets, trust matters as much as discovery. d'Market is designed to help reliable traders build reputation and help buyers make better decisions.
-          </p>
-
-          <!-- Closing line -->
-          <p class="mt-8 text-sm text-charcoal-400 leading-relaxed border-l-2 border-charcoal-700 pl-4 italic">
-            The goal is simple: reward consistency, reduce uncertainty, and make local trade easier to trust.
-          </p>
-        </div>
-
-        <!-- ── Right: Trust feature rows ── -->
-        <div class="flex flex-col divide-y divide-charcoal-800/60">
-          <div
-            v-for="feature in features"
-            :key="feature.title"
-            class="flex items-start gap-4 py-6 first:pt-0 last:pb-0"
-          >
-            <!-- Icon -->
-            <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-charcoal-800 border border-charcoal-700 flex items-center justify-center mt-0.5">
-              <svg
-                class="w-5 h-5 text-charcoal-300"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.75"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-                v-html="feature.icon"
-              />
-            </div>
-            <!-- Content -->
-            <div>
-              <h3 class="text-sm font-bold text-white leading-snug">{{ feature.title }}</h3>
-              <p class="mt-1.5 text-sm text-charcoal-400 leading-relaxed">{{ feature.body }}</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-</template>
-
 <script setup>
+import { useScrollReveal } from '~/composables/useScrollReveal'
+
+const { containerRef } = useScrollReveal()
+
 const features = [
   {
     title: 'Ratings and reviews',
@@ -82,3 +31,59 @@ const features = [
   },
 ]
 </script>
+
+<template>
+  <section ref="containerRef" class="bg-charcoal-950 py-20 lg:py-28" id="for-traders">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 lg:gap-20 items-start">
+
+        <!-- ── Left: Copy ── -->
+        <div class="reveal reveal-left lg:sticky lg:top-28">
+          <p class="text-xs font-bold tracking-[0.12em] uppercase text-charcoal-400 mb-4">
+            Trust layer
+          </p>
+          <h2 class="text-3xl lg:text-5xl font-extrabold text-white tracking-tight leading-[1.08]">
+            Trust is part of the product
+          </h2>
+          <p class="mt-5 text-lg text-charcoal-200 leading-relaxed">
+            In fragmented local markets, trust matters as much as discovery. d'Market is designed to help reliable traders build reputation and help buyers make better decisions.
+          </p>
+
+          <!-- Closing line -->
+          <p class="mt-8 text-sm text-charcoal-400 leading-relaxed border-l-2 border-charcoal-700 pl-4 italic">
+            The goal is simple: reward consistency, reduce uncertainty, and make local trade easier to trust.
+          </p>
+        </div>
+
+        <!-- ── Right: Trust feature rows ── -->
+        <div class="flex flex-col divide-y divide-charcoal-800/60">
+          <div
+            v-for="(feature, i) in features"
+            :key="feature.title"
+            class="reveal flex items-start gap-5 py-6 first:pt-0 last:pb-0"
+            :style="{ transitionDelay: i * 100 + 'ms' }"
+          >
+            <!-- Icon -->
+            <div class="flex-shrink-0 w-16 h-16 rounded-2xl bg-charcoal-800 border border-charcoal-700 flex items-center justify-center mt-0.5">
+              <svg
+                class="w-8 h-8 text-charcoal-300"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                v-html="feature.icon"
+              />
+            </div>
+            <!-- Content -->
+            <div>
+              <h3 class="text-base font-bold text-white leading-snug">{{ feature.title }}</h3>
+              <p class="mt-1.5 text-sm text-charcoal-400 leading-relaxed">{{ feature.body }}</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</template>

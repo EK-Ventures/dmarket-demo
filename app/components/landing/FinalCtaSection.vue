@@ -1,9 +1,15 @@
+<script setup>
+import { useScrollReveal } from '~/composables/useScrollReveal'
+
+const { containerRef } = useScrollReveal()
+</script>
+
 <template>
-  <section class="bg-warm-grey py-20 lg:py-28" id="register">
+  <section ref="containerRef" class="bg-warm-grey py-20 lg:py-28" id="register">
     <div class="max-w-7xl mx-auto px-5 lg:px-8">
 
       <!-- Header -->
-      <div class="max-w-xl mb-12">
+      <div class="max-w-xl mx-auto text-center reveal mb-12">
         <p class="text-xs font-bold tracking-[0.12em] uppercase text-charcoal-500 mb-4">
           Get involved
         </p>
@@ -16,7 +22,7 @@
       <div class="grid sm:grid-cols-2 gap-4 lg:gap-5">
 
         <!-- Trader card — primary -->
-        <div class="relative bg-orange-500 rounded-2xl p-8 lg:p-10 overflow-hidden flex flex-col">
+        <div class="reveal relative bg-orange-500 rounded-2xl p-8 lg:p-10 overflow-hidden flex flex-col hover:-translate-y-1 transition-all duration-300" style="transition-delay: 100ms;">
           <!-- Subtle background texture -->
           <div
             class="absolute top-0 right-0 w-64 h-64 rounded-full pointer-events-none"
@@ -46,7 +52,7 @@
         </div>
 
         <!-- Investor card — secondary -->
-        <div id="investor" class="relative bg-charcoal-950 rounded-2xl p-8 lg:p-10 overflow-hidden flex flex-col">
+        <div id="investor" class="reveal relative bg-charcoal-950 rounded-2xl p-8 lg:p-10 overflow-hidden flex flex-col hover:-translate-y-1 transition-all duration-300" style="transition-delay: 200ms;">
           <!-- Subtle glow -->
           <div
             class="absolute top-0 right-0 w-64 h-64 rounded-full pointer-events-none"

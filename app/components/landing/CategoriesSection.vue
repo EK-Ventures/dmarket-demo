@@ -1,7 +1,11 @@
 <script setup>
+import { useScrollReveal } from '~/composables/useScrollReveal'
+
 import photoProduce from '~/assets/img/photo/women-shopping-fruit-market.jpg'
 import photoGoods from '~/assets/img/photo/medium-shot-woman-holding-plate.jpg'
 import photoServices from '~/assets/img/photo/happy-african-market-woman-using-her-phone-points-it.jpg'
+
+const { containerRef } = useScrollReveal()
 
 const categories = [
   {
@@ -26,11 +30,11 @@ const categories = [
 </script>
 
 <template>
-  <section class="bg-white py-20 lg:py-28">
+  <section ref="containerRef" class="bg-white py-20 lg:py-28">
     <div class="max-w-7xl mx-auto px-5 lg:px-8">
 
       <!-- Header -->
-      <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12">
+      <div class="reveal flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12">
         <div class="max-w-xl">
           <p class="text-xs font-bold tracking-[0.12em] uppercase text-charcoal-500 mb-4">
             Marketplace categories
@@ -47,20 +51,21 @@ const categories = [
       <!-- Category cards -->
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
         <div
-          v-for="cat in categories"
+          v-for="(cat, i) in categories"
           :key="cat.title"
-          class="group relative rounded-2xl overflow-hidden bg-neutral-100"
-          style="height: 400px;"
+          class="reveal group relative rounded-2xl overflow-hidden bg-neutral-100"
+          style="height: 420px;"
+          :style="{ transitionDelay: i * 120 + 'ms' }"
         >
           <!-- Photo -->
           <img
             :src="cat.photo"
             :alt="cat.alt"
-            class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+            class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.05]"
           />
 
           <!-- Gradient overlay -->
-          <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
 
           <!-- Content -->
           <div class="absolute inset-x-0 bottom-0 p-6 lg:p-7">

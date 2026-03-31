@@ -1,84 +1,8 @@
-<template>
-  <section class="bg-warm-grey py-20 lg:py-28">
-    <div class="max-w-7xl mx-auto px-5 lg:px-8">
-
-      <!-- Header -->
-      <div class="grid lg:grid-cols-2 gap-10 lg:gap-20 mb-16">
-        <div>
-          <p class="text-xs font-bold tracking-[0.12em] uppercase text-charcoal-500 mb-4">
-            Business model
-          </p>
-          <h2 class="text-3xl lg:text-5xl font-extrabold text-charcoal-950 tracking-tight leading-[1.08]">
-            Commercially built.<br />Socially meaningful.
-          </h2>
-        </div>
-        <div class="flex items-end">
-          <p class="text-lg text-neutral-700 leading-relaxed">
-            d'Market is designed as a scalable marketplace business, not a charity model. Revenue is driven through a subscription-led approach for traders, with a free onboarding period to encourage adoption. Social impact is built in through community benefit mechanisms, aligning growth with local uplift.
-          </p>
-        </div>
-      </div>
-
-      <!-- Three structured blocks -->
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-neutral-200 rounded-2xl overflow-hidden border border-neutral-200">
-
-        <div
-          v-for="(block, i) in blocks"
-          :key="block.title"
-          class="bg-white p-7 lg:p-8 flex flex-col gap-5"
-          :class="i === 0 ? 'rounded-l-2xl' : i === 2 ? 'rounded-r-2xl' : ''"
-        >
-          <!-- Number + icon row -->
-          <div class="flex items-start justify-between">
-            <span class="text-xs font-bold tracking-[0.12em] uppercase text-neutral-500">
-              0{{ i + 1 }}
-            </span>
-            <div
-              class="w-9 h-9 rounded-xl flex items-center justify-center"
-              :class="block.iconBg"
-            >
-              <svg
-                class="w-[18px] h-[18px]"
-                :class="block.iconColor"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.75"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-                v-html="block.icon"
-              />
-            </div>
-          </div>
-
-          <!-- Content -->
-          <div>
-            <h3 class="text-base font-bold text-charcoal-950 leading-snug">
-              {{ block.title }}
-            </h3>
-            <p class="mt-2 text-base text-neutral-700 leading-relaxed">
-              {{ block.body }}
-            </p>
-          </div>
-
-          <!-- Signal tag -->
-          <div class="mt-auto">
-            <span
-              class="inline-flex items-center gap-1.5 text-xs font-semibold px-2.5 py-1.5 rounded-full border"
-              :class="block.tagStyle"
-            >
-              <span class="w-1 h-1 rounded-full flex-shrink-0" :class="block.dotColor" />
-              {{ block.tag }}
-            </span>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-</template>
-
 <script setup>
+import { useScrollReveal } from '~/composables/useScrollReveal'
+
+const { containerRef } = useScrollReveal()
+
 const blocks = [
   {
     title: 'Multi-country architecture',
@@ -112,3 +36,80 @@ const blocks = [
   },
 ]
 </script>
+
+<template>
+  <section ref="containerRef" class="bg-warm-grey py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+      <!-- Header -->
+      <div class="max-w-3xl mx-auto text-center reveal mb-16">
+        <p class="text-xs font-bold tracking-[0.12em] uppercase text-charcoal-500 mb-4">
+          Business model
+        </p>
+        <h2 class="text-3xl lg:text-5xl font-extrabold text-charcoal-950 tracking-tight leading-[1.08]">
+          Commercially built.<br />Socially meaningful.
+        </h2>
+        <p class="mt-5 text-lg text-neutral-700 leading-relaxed">
+          d'Market is designed as a scalable marketplace business, not a charity model. Revenue is driven through a subscription-led approach for traders, with a free onboarding period to encourage adoption. Social impact is built in through community benefit mechanisms, aligning growth with local uplift.
+        </p>
+      </div>
+
+      <!-- Three structured blocks -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-neutral-200 rounded-2xl overflow-hidden border border-neutral-200">
+
+        <div
+          v-for="(block, i) in blocks"
+          :key="block.title"
+          class="reveal bg-white p-7 lg:p-8 flex flex-col gap-5 hover:bg-neutral-50 transition-colors duration-200"
+          :class="i === 0 ? 'rounded-l-2xl' : i === 2 ? 'rounded-r-2xl' : ''"
+          :style="{ transitionDelay: i * 120 + 'ms' }"
+        >
+          <!-- Icon -->
+          <div
+            class="w-16 h-16 rounded-2xl flex items-center justify-center"
+            :class="block.iconBg"
+          >
+            <svg
+              class="w-8 h-8"
+              :class="block.iconColor"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              v-html="block.icon"
+            />
+          </div>
+
+          <!-- Number label -->
+          <span class="text-xs font-bold tracking-[0.12em] uppercase text-neutral-500">
+            0{{ i + 1 }}
+          </span>
+
+          <!-- Content -->
+          <div>
+            <h3 class="text-base font-bold text-charcoal-950 leading-snug">
+              {{ block.title }}
+            </h3>
+            <p class="mt-2 text-base text-neutral-700 leading-relaxed">
+              {{ block.body }}
+            </p>
+          </div>
+
+          <!-- Signal tag -->
+          <div class="mt-auto">
+            <span
+              class="inline-flex items-center gap-1.5 text-xs font-semibold px-2.5 py-1.5 rounded-full border"
+              :class="block.tagStyle"
+            >
+              <span class="w-1 h-1 rounded-full flex-shrink-0" :class="block.dotColor" />
+              {{ block.tag }}
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+</template>
