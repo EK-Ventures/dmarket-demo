@@ -34,13 +34,13 @@ const categories = [
     <div class="max-w-7xl mx-auto px-5 lg:px-8">
 
       <!-- Header -->
-      <div class="reveal flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12">
-        <div class="max-w-xl">
+      <div class="reveal flex flex-col items-center text-center gap-6 mb-12">
+        <div>
           <h2 class="text-3xl lg:text-5xl font-extrabold text-charcoal-950 tracking-tight leading-[1.08]">
             One platform.<br />Everyday local commerce.
           </h2>
         </div>
-        <p class="text-sm text-neutral-500 max-w-xs lg:text-right leading-relaxed lg:pb-1">
+        <p class="text-sm text-neutral-500 max-w-xs leading-relaxed">
           Built for the way communities already trade - with better visibility, trust and reach.
         </p>
       </div>

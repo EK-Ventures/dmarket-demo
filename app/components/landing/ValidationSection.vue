@@ -86,24 +86,6 @@ const quotes = [
 
       </div>
 
-      <!-- CTA + attribution row -->
-      <div class="reveal mt-10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4" style="transition-delay: 400ms;">
-        <a
-          href="#validation"
-          class="inline-flex items-center gap-2.5 px-5 py-3 text-sm font-semibold text-neutral-900 border border-neutral-400 hover:border-neutral-700 hover:bg-white rounded-xl transition-all duration-150 self-start"
-        >
-          <span class="w-6 h-6 rounded-full bg-charcoal-100 flex items-center justify-center">
-            <svg class="w-2.5 h-2.5 text-charcoal-700 ml-px" viewBox="0 0 10 12" fill="currentColor" aria-hidden="true">
-              <path d="M0 0l10 6L0 12V0z" />
-            </svg>
-          </span>
-          Watch the validation video
-        </a>
-        <p class="text-sm text-neutral-500 italic max-w-xs sm:text-right">
-          Insights drawn from primary market interviews and partner engagement.
-        </p>
-      </div>
-
     </div>
   </section>
 </template>
