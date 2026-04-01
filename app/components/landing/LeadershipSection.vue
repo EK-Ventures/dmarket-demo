@@ -1,5 +1,6 @@
 <script setup>
 import { useScrollReveal } from '~/composables/useScrollReveal'
+import bgPattern from '~/assets/img/background-pattern.png'
 
 const { containerRef } = useScrollReveal()
 
@@ -28,8 +29,20 @@ const capabilities = [
 </script>
 
 <template>
-  <section ref="containerRef" class="bg-charcoal-950 py-20 lg:py-28" id="team">
-    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+  <section ref="containerRef" class="relative bg-warm-grey py-24 lg:py-32" id="team">
+    <!-- Background pattern (same as FinalCtaSection — peeks out from under the charcoal diagonal) -->
+    <div
+      class="absolute inset-0 pointer-events-none"
+      :style="`background-image: url('${bgPattern}'); background-repeat: repeat; background-size: 480px 405px; opacity: 0.8; mix-blend-mode: multiply;`"
+      aria-hidden="true"
+    />
+    <!-- Charcoal overlay clipped with a diagonal bottom edge, matching the separator angle -->
+    <div
+      class="absolute inset-x-0 bottom-0 bg-charcoal-950 pointer-events-none"
+      style="top: -2px; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), 0 calc(100% - 80px));"
+      aria-hidden="true"
+    />
+    <div class="relative z-10 max-w-7xl mx-auto px-5 lg:px-8">
       <div class="grid lg:grid-cols-2 gap-16 lg:gap-20 items-start">
 
         <!-- ── Left: Copy ── -->
@@ -83,5 +96,6 @@ const capabilities = [
 
       </div>
     </div>
+
   </section>
 </template>

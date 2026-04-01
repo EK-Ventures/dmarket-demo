@@ -13,7 +13,7 @@ const { containerRef } = useScrollReveal()
 </script>
 
 <template>
-  <section ref="containerRef" class="bg-warm-grey border-y border-neutral-200" aria-label="Credibility signals">
+  <section ref="containerRef" class="relative overflow-hidden bg-warm-grey pb-16 lg:pb-20" aria-label="Credibility signals">
     <div class="max-w-7xl mx-auto px-5 lg:px-8 py-5 lg:py-6">
       <div class="reveal flex flex-wrap justify-center items-center gap-x-0 gap-y-3">
 
@@ -46,6 +46,13 @@ const { containerRef } = useScrollReveal()
         </template>
 
       </div>
+    </div>
+
+    <!-- Bottom polygon: same shape as hero separator, strip's own warm-grey colour -->
+    <div class="absolute bottom-0 inset-x-0 h-16 lg:h-20 pointer-events-none" aria-hidden="true">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+        <polygon points="0,60 1440,0 1440,80 0,80" fill="#fff"/>
+      </svg>
     </div>
   </section>
 </template>

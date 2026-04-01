@@ -38,7 +38,7 @@ const blocks = [
 </script>
 
 <template>
-  <section ref="containerRef" class="bg-warm-grey py-20 lg:py-28">
+  <section ref="containerRef" class="relative overflow-hidden bg-warm-grey pt-20 pb-28 lg:pt-28 lg:pb-36">
     <div class="max-w-7xl mx-auto px-5 lg:px-8">
 
       <!-- Header -->
@@ -108,6 +108,13 @@ const blocks = [
 
       </div>
 
+    </div>
+
+    <!-- Bottom separator: warm-grey → charcoal-950 (V-peak) -->
+    <div class="absolute bottom-0 inset-x-0 h-16 lg:h-20 pointer-events-none" aria-hidden="true">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+        <polygon points="0,0 720,50 1440,0 1440,80 0,80" fill="#051315"/>
+      </svg>
     </div>
   </section>
 </template>

@@ -33,7 +33,7 @@ const features = [
 </script>
 
 <template>
-  <section ref="containerRef" class="bg-charcoal-950 py-20 lg:py-28" id="for-traders">
+  <section ref="containerRef" class="relative overflow-hidden bg-charcoal-950 py-24 lg:py-32" id="for-traders">
     <div class="max-w-7xl mx-auto px-5 lg:px-8">
       <div class="grid lg:grid-cols-2 gap-16 lg:gap-20 items-start">
 
@@ -81,6 +81,13 @@ const features = [
         </div>
 
       </div>
+    </div>
+
+    <!-- Bottom separator: charcoal-950 → warm-grey (steeper angle) -->
+    <div class="absolute bottom-0 inset-x-0 h-16 lg:h-20 pointer-events-none" aria-hidden="true">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+        <polygon points="0,40 1440,0 1440,80 0,80" fill="#f5f3ef"/>
+      </svg>
     </div>
   </section>
 </template>

@@ -1,11 +1,18 @@
 <script setup>
 import { useScrollReveal } from '~/composables/useScrollReveal'
+import bgPattern from '~/assets/img/background-pattern.png'
 
 const { containerRef } = useScrollReveal()
 </script>
 
 <template>
-  <section ref="containerRef" class="bg-warm-grey py-20 lg:py-28" id="register">
+  <section ref="containerRef" class="relative bg-warm-grey py-20 lg:py-28" id="register">
+    <!-- Background texture -->
+    <div
+      class="absolute inset-0 pointer-events-none"
+      :style="`background-image: url('${bgPattern}'); background-repeat: repeat; background-size: 480px 405px; opacity: 0.8; mix-blend-mode: multiply;`"
+      aria-hidden="true"
+    />
     <div class="max-w-7xl mx-auto px-5 lg:px-8">
 
       <!-- Header -->
@@ -89,5 +96,6 @@ const { containerRef } = useScrollReveal()
       </div>
 
     </div>
+
   </section>
 </template>
