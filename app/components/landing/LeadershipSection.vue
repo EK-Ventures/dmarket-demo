@@ -46,7 +46,7 @@ const capabilities = [
 
           <!-- Divider -->
           <div class="mt-10 pt-10 border-t border-charcoal-800 space-y-3">
-            <p class="text-sm text-charcoal-400 leading-relaxed">
+            <p class="text-sm font-semibold text-charcoal-200 leading-relaxed">
               A UK-based venture with regional understanding and a disciplined approach to scale.
             </p>
             <p class="text-sm font-semibold text-charcoal-200">
@@ -76,7 +76,7 @@ const capabilities = [
               />
             </div>
             <h3 class="text-sm font-bold text-white leading-snug">{{ cap.title }}</h3>
-            <p class="mt-2 text-sm text-charcoal-200 leading-relaxed">{{ cap.body }}</p>
+            <p class="mt-3 text-sm text-charcoal-200 leading-relaxed">{{ cap.body }}</p>
           </div>
         </div>
 

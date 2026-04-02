@@ -32,14 +32,14 @@ import photoSaleswoman from '~/assets/img/photo/attractive-african-saleswoman-fr
           </h1>
 
           <!-- Eyebrow -->
-          <div class="hero-anim-1 inline-flex items-center gap-2 py-1.5  mb-8">
-            <span class="text-green-400 text-md font-semibold tracking-wider uppercase leading-none">
+          <div class="hero-anim-1 inline-flex items-center gap-2 py-1.5  mb-2">
+            <span class="text-white text-xl font-bold tracking-wider leading-none">
               Mobile marketplace for local trade across Africa
             </span>
           </div>
 
           <!-- Body -->
-          <p class="hero-anim-3 mt-6 text-lg text-neutral-200 leading-relaxed max-w-lg">
+          <p class="hero-anim-3 text-lg text-neutral-200 leading-relaxed max-w-lg">
             Designed for informal traders and everyday buyers, d'Market helps people discover nearby products and services, build trust through reputation, and grow local trade through mobile-first commerce.
           </p>
 

@@ -1,6 +1,5 @@
 <script setup>
 import { useScrollReveal } from '~/composables/useScrollReveal'
-import photoThumbnail from '~/assets/img/photo/young-black-african-businesswoman-local-market-smiling-browsing-online-using-smartphone-checking-reading-news-online-holding-apple.jpg'
 
 const { containerRef } = useScrollReveal()
 
@@ -34,54 +33,41 @@ const quotes = [
         </p>
       </div>
 
-      <!-- Two-column: video + quotes -->
-      <div class="grid lg:grid-cols-[1.4fr_1fr] gap-6 lg:gap-8 items-start">
+      <!-- Video + Quotes -->
+      <div class="grid lg:grid-cols-[260px_1fr] gap-6 lg:gap-8 items-start max-w-3xl mx-auto">
 
-        <!-- Video placeholder -->
-        <div class="reveal relative rounded-2xl overflow-hidden bg-charcoal-900 shadow-xl group cursor-pointer aspect-video lg:aspect-auto lg:h-full lg:min-h-[340px]" style="transition-delay: 100ms;">
-          <!-- Thumbnail photo -->
-          <img
-            :src="photoThumbnail"
-            alt="African businesswoman at a local market smiling while using a smartphone - field validation interview still"
-            class="absolute inset-0 w-full h-full object-cover opacity-55 group-hover:opacity-65 transition-opacity duration-300"
-          />
-
-          <!-- Dark overlay -->
-          <div class="absolute inset-0 bg-charcoal-950/40" />
-
-          <!-- Play button -->
-          <div class="absolute inset-0 flex items-center justify-center">
-            <div class="w-20 h-20 rounded-full bg-white/95 group-hover:bg-white group-hover:scale-110 flex items-center justify-center shadow-2xl transition-all duration-300">
-              <svg class="w-8 h-8 text-charcoal-900 ml-1.5" viewBox="0 0 20 24" fill="currentColor" aria-hidden="true">
-                <path d="M0 0l20 12L0 24V0z" />
-              </svg>
-            </div>
-          </div>
-
-          <!-- Label -->
-          <div class="absolute bottom-0 inset-x-0 p-5 bg-gradient-to-t from-black/60 to-transparent">
-            <p class="text-white text-sm font-semibold">Market validation interviews</p>
-            <p class="text-white/80 text-sm mt-0.5">Primary research across target territories</p>
+        <!-- YouTube Short -->
+        <div class="reveal w-full max-w-[260px] mx-auto lg:mx-0">
+          <div class="relative aspect-[9/16] rounded-2xl overflow-hidden shadow-xl bg-charcoal-900">
+            <!-- TODO: replace VIDEO_ID with the actual YouTube Short video ID -->
+            <iframe
+              src="https://www.youtube.com/embed/VIDEO_ID?rel=0&modestbranding=1"
+              title="Market validation interviews"
+              class="absolute inset-0 w-full h-full"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            />
           </div>
         </div>
 
         <!-- Quotes -->
-        <div class="flex flex-col gap-4">
-          <blockquote
-            v-for="(quote, i) in quotes"
-            :key="quote.text"
-            class="reveal bg-white rounded-2xl p-6 border border-neutral-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
-            :style="{ transitionDelay: (i + 1) * 120 + 'ms' }"
-          >
-            <!-- Large quote mark -->
-            <span class="block text-4xl font-black text-orange-200 leading-none mb-2" aria-hidden="true">"</span>
-            <p class="text-neutral-800 text-base font-medium leading-relaxed -mt-2">
-              {{ quote.text }}
-            </p>
-            <footer class="mt-3 text-sm text-neutral-500 font-medium">
-              {{ quote.source }}
-            </footer>
-          </blockquote>
+        <div class="flex flex-col justify-between gap-4 lg:gap-5 h-full">
+        <blockquote
+          v-for="(quote, i) in quotes"
+          :key="quote.text"
+          class="reveal bg-white rounded-2xl p-6 border border-neutral-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
+          :style="{ transitionDelay: (i + 1) * 120 + 'ms' }"
+        >
+          <!-- Large quote mark -->
+          <span class="block text-4xl font-black text-orange-200 leading-none mb-2" aria-hidden="true">"</span>
+          <p class="text-neutral-800 text-base font-medium leading-relaxed -mt-2 italic">
+            {{ quote.text }}
+          </p>
+          <footer class="mt-3 text-sm text-neutral-500 font-medium">
+            {{ quote.source }}
+          </footer>
+        </blockquote>
         </div>
 
       </div>
