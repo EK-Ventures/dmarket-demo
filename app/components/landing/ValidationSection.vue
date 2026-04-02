@@ -20,11 +20,11 @@ const quotes = [
 </script>
 
 <template>
-  <section ref="containerRef" class="bg-warm-grey py-20 lg:py-28" id="validation">
+  <section ref="containerRef" class="bg-warm-grey py-12 lg:py-16" id="validation">
     <div class="max-w-7xl mx-auto px-5 lg:px-8">
 
       <!-- Header -->
-      <div class="max-w-3xl mx-auto text-center reveal mb-12">
+      <div class="max-w-3xl mx-auto text-center reveal mb-8">
         <h2 class="text-3xl lg:text-5xl font-extrabold text-charcoal-950 tracking-tight leading-[1.08]">
           Built from real conversations in-market
         </h2>
@@ -56,15 +56,15 @@ const quotes = [
         <blockquote
           v-for="(quote, i) in quotes"
           :key="quote.text"
-          class="reveal bg-white rounded-2xl p-6 border border-neutral-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
+          class="reveal bg-white rounded-xl p-4 border border-neutral-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
           :style="{ transitionDelay: (i + 1) * 120 + 'ms' }"
         >
           <!-- Large quote mark -->
-          <span class="block text-4xl font-black text-orange-200 leading-none mb-2" aria-hidden="true">"</span>
-          <p class="text-neutral-800 text-base font-medium leading-relaxed -mt-2 italic">
+          <span class="block text-3xl font-black text-orange-200 leading-none mb-1" aria-hidden="true">"</span>
+          <p class="text-neutral-800 text-sm font-medium leading-relaxed -mt-1 italic">
             {{ quote.text }}
           </p>
-          <footer class="mt-3 text-sm text-neutral-500 font-medium">
+          <footer class="mt-2 text-xs text-neutral-500 font-medium">
             {{ quote.source }}
           </footer>
         </blockquote>

@@ -62,7 +62,7 @@ function closeMenu() {
         <div class="hidden lg:flex items-center gap-2.5">
           <a
             href="#investor"
-            class="px-4 py-2 text-sm font-semibold text-charcoal-700 border border-neutral-200 hover:border-charcoal-400 hover:text-charcoal-900 rounded-xl transition-all duration-150 whitespace-nowrap"
+            class="px-4 py-2 text-sm font-semibold text-charcoal-700 border border-neutral-600 hover:border-charcoal-400 hover:text-charcoal-900 rounded-xl transition-all duration-150 whitespace-nowrap"
           >
             Investor / NED interest
           </a>
@@ -144,7 +144,7 @@ function closeMenu() {
         </nav>
 
         <!-- Investor CTA -->
-        <div class="px-5 pb-5 pt-2 border-t border-neutral-100">
+        <div class="px-5 pb-5 pt-2 border-t border-neutral-300">
           <a
             href="#investor"
             class="flex items-center justify-center w-full px-4 py-2.5 text-sm font-semibold text-charcoal-700 border border-neutral-200 hover:border-charcoal-400 rounded-xl transition-all duration-150"
