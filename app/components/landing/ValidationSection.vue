@@ -1,8 +1,12 @@
 <script setup>
+import { ref } from 'vue'
 import { useScrollReveal } from '~/composables/useScrollReveal'
-import photoThumbnail from '~/assets/img/photo/young-black-african-businesswoman-local-market-smiling-browsing-online-using-smartphone-checking-reading-news-online-holding-apple.jpg'
+import photoThumbnailAvif from '~/assets/img/photo/african-market-selling-with-client.avif'
+import photoThumbnailWebp from '~/assets/img/photo/african-market-selling-with-client.webp'
+import photoThumbnailJpg  from '~/assets/img/photo/african-market-selling-with-client.jpg'
 
 const { containerRef } = useScrollReveal()
+const showModal = ref(false)
 
 const quotes = [
   {
@@ -39,13 +43,17 @@ const quotes = [
 
         <!-- YouTube Short -->
         <div class="reveal w-full max-w-[260px] mx-auto lg:mx-0">
-          <div class="relative aspect-[9/16] rounded-2xl overflow-hidden shadow-xl bg-charcoal-900 group cursor-pointer">
+          <div class="relative aspect-[9/16] rounded-2xl overflow-hidden shadow-xl bg-charcoal-900 group cursor-pointer" @click="showModal = true">
             <!-- Thumbnail -->
-            <img
-              :src="photoThumbnail"
-              alt="African businesswoman at a local market smiling while using a smartphone - field validation interview still"
-              class="absolute inset-0 w-full h-full object-cover opacity-55 group-hover:opacity-65 transition-opacity duration-300"
-            />
+            <picture class="absolute inset-0 w-full h-full">
+              <source :srcset="photoThumbnailAvif" type="image/avif" />
+              <source :srcset="photoThumbnailWebp" type="image/webp" />
+              <img
+                :src="photoThumbnailJpg"
+                alt="African market seller with a client, showcasing local trade - field validation interview still"
+                class="w-full h-full object-cover opacity-55 group-hover:opacity-65 transition-opacity duration-300"
+              />
+            </picture>
             <!-- Dark overlay -->
             <div class="absolute inset-0 bg-charcoal-950/40" />
             <!-- Play button -->
@@ -87,4 +95,34 @@ const quotes = [
 
     </div>
   </section>
+
+  <!-- Video modal -->
+  <Teleport to="body">
+    <div
+      v-if="showModal"
+      class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
+      @click.self="showModal = false"
+    >
+      <div class="relative rounded-2xl overflow-hidden shadow-2xl bg-black" style="width:320px;height:568px">
+        <iframe
+          width="320"
+          height="568"
+          class="block"
+          src="https://www.youtube.com/embed/D16a_Q3AJ4Y?autoplay=1"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+          frameborder="0"
+        />
+        <button
+          class="absolute top-2 right-2 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-black/80 transition-colors"
+          aria-label="Close video"
+          @click="showModal = false"
+        >
+          <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M18 6L6 18M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </Teleport>
 </template>

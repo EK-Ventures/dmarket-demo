@@ -1,6 +1,8 @@
 <script setup>
 import { useScrollReveal } from '~/composables/useScrollReveal'
 
+import photoProduceAvif from '~/assets/img/photo/women-shopping-fruit-market.avif'
+import photoProduceWebp from '~/assets/img/photo/women-shopping-fruit-market.webp'
 import photoProduce from '~/assets/img/photo/women-shopping-fruit-market.jpg'
 import photoGoods from '~/assets/img/photo/medium-shot-woman-holding-plate.jpg'
 import photoServices from '~/assets/img/photo/happy-african-market-woman-using-her-phone-points-it.jpg'
@@ -9,6 +11,8 @@ const { containerRef } = useScrollReveal()
 
 const categories = [
   {
+    photoAvif: photoProduceAvif,
+    photoWebp: photoProduceWebp,
     photo: photoProduce,
     tag: 'Fresh produce',
     title: 'For market sellers',
@@ -16,6 +20,8 @@ const categories = [
     alt: 'African saleswoman at a fruit stand with folded arms, confident and ready to trade',
   },
   {
+    photoAvif: null,
+    photoWebp: null,
     photo: photoGoods,
     tag: 'Goods',
     title: 'For everyday essentials',
@@ -23,6 +29,8 @@ const categories = [
     alt: 'African market vendor counting money while selling fruit and goods',
   },
   {
+    photoAvif: null,
+    photoWebp: null,
     photo: photoServices,
     tag: 'Handyman & local services',
     title: 'For trusted local services',
@@ -58,11 +66,15 @@ const categories = [
           :style="{ transitionDelay: i * 120 + 'ms' }"
         >
           <!-- Photo -->
-          <img
-            :src="cat.photo"
-            :alt="cat.alt"
-            class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.05]"
-          />
+          <picture class="absolute inset-0 w-full h-full">
+            <source v-if="cat.photoAvif" :srcset="cat.photoAvif" type="image/avif" />
+            <source v-if="cat.photoWebp" :srcset="cat.photoWebp" type="image/webp" />
+            <img
+              :src="cat.photo"
+              :alt="cat.alt"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.05]"
+            />
+          </picture>
 
           <!-- Gradient overlay -->
           <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent" />

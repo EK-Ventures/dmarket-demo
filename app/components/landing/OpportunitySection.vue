@@ -1,5 +1,6 @@
 <script setup>
 import { useScrollReveal } from '~/composables/useScrollReveal'
+import bgPattern from '~/assets/img/background-pattern.png'
 import { useCountUp } from '~/composables/useCountUp'
 
 const { containerRef } = useScrollReveal()
@@ -46,8 +47,14 @@ const tags = [
 </script>
 
 <template>
-  <section ref="containerRef" class="bg-white py-20 lg:py-28" id="for-investors">
-    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+  <section ref="containerRef" class="relative bg-white py-20 lg:py-28" id="for-investors">
+    <!-- Background texture -->
+    <div
+      class="absolute inset-0 pointer-events-none"
+      :style="`background-image: url('${bgPattern}'); background-repeat: repeat; background-size: 480px auto; opacity: 0.7; mix-blend-mode: multiply;`"
+      aria-hidden="true"
+    />
+    <div class="relative max-w-7xl mx-auto px-5 lg:px-8">
       <div class="grid lg:grid-cols-[1fr_420px] gap-16 lg:gap-20 items-center">
 
         <!-- ── Left: Narrative ── -->

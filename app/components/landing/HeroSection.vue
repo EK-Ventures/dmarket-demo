@@ -1,5 +1,9 @@
 <script setup>
+import photoMainAvif from '~/assets/img/photo/excited-african-market-woman-using-mobile-phone.avif'
+import photoMainWebp from '~/assets/img/photo/excited-african-market-woman-using-mobile-phone.webp'
 import photoMain from '~/assets/img/photo/excited-african-market-woman-using-mobile-phone.jpg'
+import photoCountingMoneyAvif from '~/assets/img/photo/african-market-man-selling-fruits-items-counting-money.avif'
+import photoCountingMoneyWebp from '~/assets/img/photo/african-market-man-selling-fruits-items-counting-money.webp'
 import photoCountingMoney from '~/assets/img/photo/african-market-man-selling-fruits-items-counting-money.jpg'
 import photoSaleswoman from '~/assets/img/photo/attractive-african-saleswoman-fruit-stand-with-folded-arms.jpg'
 </script>
@@ -80,21 +84,29 @@ import photoSaleswoman from '~/assets/img/photo/attractive-african-saleswoman-fr
           <div class="relative flex gap-3 h-[560px]">
             <!-- Main tall photo -->
             <div class="relative flex-[1.1] rounded-2xl overflow-hidden ring-1 ring-white/[0.08] shadow-2xl">
-              <img
-                :src="photoMain"
-                alt="Female market trader smiling while using a mobile phone at a vibrant local market stall, warm natural light"
-                class="w-full h-full object-cover"
-              />
+              <picture class="w-full h-full">
+                <source :srcset="photoMainAvif" type="image/avif" />
+                <source :srcset="photoMainWebp" type="image/webp" />
+                <img
+                  :src="photoMain"
+                  alt="Female market trader smiling while using a mobile phone at a vibrant local market stall, warm natural light"
+                  class="w-full h-full object-cover"
+                />
+              </picture>
               <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/30 to-transparent pointer-events-none" />
             </div>
             <!-- Right column: two stacked photos, offset down -->
             <div class="flex-1 flex flex-col gap-3 pt-10">
               <div class="flex-1 rounded-2xl overflow-hidden ring-1 ring-white/[0.08] shadow-2xl">
-                <img
-                  :src="photoCountingMoney"
-                  alt="Male market vendor counting money beside a colourful fruit display, authentic local market scene"
-                  class="w-full h-full object-cover"
-                />
+                <picture class="w-full h-full">
+                  <source :srcset="photoCountingMoneyAvif" type="image/avif" />
+                  <source :srcset="photoCountingMoneyWebp" type="image/webp" />
+                  <img
+                    :src="photoCountingMoney"
+                    alt="Male market vendor counting money beside a colourful fruit display, authentic local market scene"
+                    class="w-full h-full object-cover"
+                  />
+                </picture>
               </div>
               <div class="flex-1 rounded-2xl overflow-hidden ring-1 ring-white/[0.08] shadow-2xl">
                 <img
@@ -110,11 +122,15 @@ import photoSaleswoman from '~/assets/img/photo/attractive-african-saleswoman-fr
         <!-- ── Mobile: Single photo below copy ── -->
         <div class="lg:hidden mt-2">
           <div class="rounded-2xl overflow-hidden ring-1 ring-white/[0.08] shadow-2xl aspect-[4/3]">
-            <img
-              :src="photoMain"
-              alt="Female market trader using a mobile phone at a local market stall"
-              class="w-full h-full object-cover"
-            />
+            <picture class="w-full h-full">
+              <source :srcset="photoMainAvif" type="image/avif" />
+              <source :srcset="photoMainWebp" type="image/webp" />
+              <img
+                :src="photoMain"
+                alt="Female market trader using a mobile phone at a local market stall"
+                class="w-full h-full object-cover"
+              />
+            </picture>
           </div>
         </div>
 
