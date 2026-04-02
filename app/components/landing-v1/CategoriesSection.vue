@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import photoFreshProduce from '~/assets/img/photo/attractive-african-saleswoman-fruit-stand-with-folded-arms.jpg'
+import photoFreshProduce from '~/assets/img/photo/african-market-selling-with-client.jpg'
 import photoGoods from '~/assets/img/photo/african-market-man-selling-fruits-items-counting-money.jpg'
-import photoServices from '~/assets/img/photo/medium-shot-man-holding-plants.jpg'
+import photoServices from '~/assets/img/photo/handyman-and-local-services.jpg'
 
 const categories = [
   {

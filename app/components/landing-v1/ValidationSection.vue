@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import videoThumbnail from '~/assets/img/photo/young-black-african-businesswoman-local-market-smiling-browsing-online-using-smartphone-checking-reading-news-online-holding-apple.jpg'
+import videoThumbnail from '~/assets/img/photo/young-black-african-businesswoman-local-market-with-smartphone.jpg'
 
 const quotes = [
   'I can sell more if more people know what I have today.',
