@@ -69,7 +69,7 @@ const { containerRef } = useScrollReveal()
           <h3 class="text-2xl lg:text-3xl font-extrabold text-white leading-snug">
             Engage at the right stage
           </h3>
-          <p class="mt-3 text-base text-charcoal-300 leading-relaxed flex-1">
+          <p class="mt-3 text-base text-charcoal-200 leading-relaxed flex-1">
             We are engaging aligned investors and experienced advisors for the next stage of growth. If you share our conviction in local African commerce, we'd like to hear from you.
           </p>
           <div class="mt-8 flex flex-col gap-3">

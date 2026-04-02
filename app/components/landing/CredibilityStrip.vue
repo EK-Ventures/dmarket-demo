@@ -13,7 +13,7 @@ const { containerRef } = useScrollReveal()
 </script>
 
 <template>
-  <section ref="containerRef" class="bg-warm-grey" aria-label="Credibility signals">
+  <section ref="containerRef" class="bg-warm-grey -mt-px" aria-label="Credibility signals">
     <div class="max-w-7xl mx-auto px-5 lg:px-8 py-5 lg:py-6">
       <div class="reveal flex flex-wrap justify-center items-center gap-x-0 gap-y-3">
 
