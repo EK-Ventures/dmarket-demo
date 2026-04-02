@@ -69,7 +69,7 @@ const quotes = [
         <blockquote
           v-for="(quote, i) in quotes"
           :key="quote.text"
-          class="reveal bg-white rounded-xl p-4 border border-neutral-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
+          class="reveal bg-white rounded-xl p-5 border border-neutral-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
           :style="{ transitionDelay: (i + 1) * 120 + 'ms' }"
         >
           <!-- Large quote mark -->
