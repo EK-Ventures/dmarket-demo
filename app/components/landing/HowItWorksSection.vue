@@ -40,12 +40,6 @@ const steps = [
       :style="`background-image: url('${bgPattern}'); background-repeat: repeat; background-size: 480px 405px; opacity: 0.7; mix-blend-mode: multiply;`"
       aria-hidden="true"
     />
-    <!-- White overlay clipped with diagonal bottom edge — blends with WhatIsSection above -->
-    <div
-      class="absolute inset-x-0 top-0 bg-white pointer-events-none"
-      style="height: 80px; clip-path: polygon(0 0, 100% 0, 100% 20px, 0 80px);"
-      aria-hidden="true"
-    />
     <div class="relative max-w-7xl mx-auto px-5 lg:px-8">
 
       <!-- Header -->
