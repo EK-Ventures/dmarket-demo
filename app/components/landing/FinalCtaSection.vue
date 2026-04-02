@@ -63,7 +63,7 @@ const { containerRef } = useScrollReveal()
             style="background: radial-gradient(ellipse, rgba(45,137,149,0.08) 0%, transparent 70%); transform: translate(30%, -30%);"
           />
 
-          <p class="text-xs font-bold tracking-[0.12em] uppercase text-charcoal-400 mb-5">
+          <p class="text-xs font-bold tracking-[0.12em] uppercase text-charcoal-200 mb-5">
             For investors &amp; NEDs
           </p>
           <h3 class="text-2xl lg:text-3xl font-extrabold text-white leading-snug">
@@ -75,10 +75,10 @@ const { containerRef } = useScrollReveal()
           <div class="mt-8 flex flex-col gap-3">
             <!-- SEIS reassurance -->
             <div class="flex items-center gap-2">
-              <svg class="w-3.5 h-3.5 text-green-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 12 12" aria-hidden="true">
+              <svg class="w-5 h-5 text-green-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 12 12" aria-hidden="true">
                 <polyline points="2 6 5 9 10 3" />
               </svg>
-              <span class="text-xs text-charcoal-400">SEIS Advance Assurance granted</span>
+              <span class="text-md text-charcoal-400">SEIS Advance Assurance granted</span>
             </div>
             <a
               href="#"

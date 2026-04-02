@@ -24,18 +24,19 @@ import photoSaleswoman from '~/assets/img/photo/attractive-african-saleswoman-fr
         <!-- ── Left: Copy ── -->
         <div>
 
-          <!-- Eyebrow -->
-          <div class="hero-anim-1 inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-green-500/30 bg-green-500/10 mb-8">
-            <span class="w-1.5 h-1.5 rounded-full bg-green-400 flex-shrink-0" />
-            <span class="text-green-400 text-xs font-semibold tracking-wider uppercase leading-none">
-              Mobile marketplace for local trade across Sub-Saharan Africa
-            </span>
-          </div>
+
 
           <!-- Headline -->
-          <h1 class="hero-anim-2 text-5xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.03]">
-            Buy local -<br />Sell big.
+          <h1 class="hero-anim-2 text-5xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.03] mb-8">
+            Buy local -<br />Sell big
           </h1>
+
+          <!-- Eyebrow -->
+          <div class="hero-anim-1 inline-flex items-center gap-2 py-1.5  mb-8">
+            <span class="text-green-400 text-md font-semibold tracking-wider uppercase leading-none">
+              Mobile marketplace for local trade across Africa
+            </span>
+          </div>
 
           <!-- Body -->
           <p class="hero-anim-3 mt-6 text-lg text-neutral-200 leading-relaxed max-w-lg">

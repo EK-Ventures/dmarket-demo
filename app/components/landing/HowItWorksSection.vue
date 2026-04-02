@@ -46,7 +46,7 @@ const steps = [
       <div class="max-w-2xl mx-auto text-center reveal">
 
         <h2 class="text-3xl lg:text-5xl font-extrabold text-charcoal-950 tracking-tight leading-[1.08]">
-          Simple to use. Built for everyday trade.
+          Simple to use <br/> Built for everyday trade
         </h2>
       </div>
 
@@ -77,7 +77,7 @@ const steps = [
       </div>
 
       <!-- Microcopy -->
-      <p class="reveal mt-10 text-base text-neutral-600 text-center" style="transition-delay: 450ms;">
+      <p class="reveal mt-10 text-lg text-charcoal-800 text-center" style="transition-delay: 450ms;">
         Designed for mobile-first markets and everyday users.
       </p>
 
