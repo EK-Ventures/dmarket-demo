@@ -5,7 +5,7 @@ import photoSaleswoman from '~/assets/img/photo/attractive-african-saleswoman-fr
 </script>
 
 <template>
-  <section class="relative bg-charcoal-950 overflow-hidden">
+  <section class="relative bg-[#123940] overflow-hidden">
 
     <!-- Ambient background glows -->
     <div
