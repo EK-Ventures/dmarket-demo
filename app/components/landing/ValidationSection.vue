@@ -1,9 +1,9 @@
 <script setup>
 import { ref } from 'vue'
 import { useScrollReveal } from '~/composables/useScrollReveal'
-import photoThumbnailAvif from '~/assets/img/photo/african-market-selling-with-client.avif'
-import photoThumbnailWebp from '~/assets/img/photo/african-market-selling-with-client.webp'
-import photoThumbnailJpg  from '~/assets/img/photo/african-market-selling-with-client.jpg'
+import photoThumbnailAvif from '~/assets/img/photo/young-black-african-businesswoman-local-market-with-smartphone.avif'
+import photoThumbnailWebp from '~/assets/img/photo/young-black-african-businesswoman-local-market-with-smartphone.webp'
+import photoThumbnailJpg  from '~/assets/img/photo/young-black-african-businesswoman-local-market-with-smartphone.jpg'
 
 const { containerRef } = useScrollReveal()
 const showModal = ref(false)
@@ -63,11 +63,6 @@ const quotes = [
                   <path d="M0 0l20 12L0 24V0z" />
                 </svg>
               </div>
-            </div>
-            <!-- Label -->
-            <div class="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/60 to-transparent">
-              <p class="text-white text-xs font-semibold">Market validation interviews</p>
-              <p class="text-white/70 text-xs mt-0.5">Primary research across target territories</p>
             </div>
           </div>
         </div>

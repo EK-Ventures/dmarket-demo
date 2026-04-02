@@ -4,8 +4,12 @@ import { useScrollReveal } from '~/composables/useScrollReveal'
 import photoProduceAvif from '~/assets/img/photo/women-shopping-fruit-market.avif'
 import photoProduceWebp from '~/assets/img/photo/women-shopping-fruit-market.webp'
 import photoProduce from '~/assets/img/photo/women-shopping-fruit-market.jpg'
-import photoGoods from '~/assets/img/photo/medium-shot-woman-holding-plate.jpg'
-import photoServices from '~/assets/img/photo/happy-african-market-woman-using-her-phone-points-it.jpg'
+import photoGoodsAvif from '~/assets/img/photo/goods.avif'
+import photoGoodsWebp from '~/assets/img/photo/goods.webp'
+import photoGoods from '~/assets/img/photo/goods.jpg'
+import photoServicesAvif from '~/assets/img/photo/handyman-and-local-services.avif'
+import photoServicesWebp from '~/assets/img/photo/handyman-and-local-services.webp'
+import photoServices from '~/assets/img/photo/handyman-and-local-services.jpg'
 
 const { containerRef } = useScrollReveal()
 
@@ -20,8 +24,8 @@ const categories = [
     alt: 'African saleswoman at a fruit stand with folded arms, confident and ready to trade',
   },
   {
-    photoAvif: null,
-    photoWebp: null,
+    photoAvif: photoGoodsAvif,
+    photoWebp: photoGoodsWebp,
     photo: photoGoods,
     tag: 'Goods',
     title: 'For everyday essentials',
@@ -29,8 +33,8 @@ const categories = [
     alt: 'African market vendor counting money while selling fruit and goods',
   },
   {
-    photoAvif: null,
-    photoWebp: null,
+    photoAvif: photoServicesAvif,
+    photoWebp: photoServicesWebp,
     photo: photoServices,
     tag: 'Handyman & local services',
     title: 'For trusted local services',

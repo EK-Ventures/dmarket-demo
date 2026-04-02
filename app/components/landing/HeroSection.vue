@@ -5,7 +5,9 @@ import photoMain from '~/assets/img/photo/excited-african-market-woman-using-mob
 import photoCountingMoneyAvif from '~/assets/img/photo/african-market-man-selling-fruits-items-counting-money.avif'
 import photoCountingMoneyWebp from '~/assets/img/photo/african-market-man-selling-fruits-items-counting-money.webp'
 import photoCountingMoney from '~/assets/img/photo/african-market-man-selling-fruits-items-counting-money.jpg'
-import photoSaleswoman from '~/assets/img/photo/attractive-african-saleswoman-fruit-stand-with-folded-arms.jpg'
+import photoSaleswomanAvif from '~/assets/img/photo/african-market-selling-with-client.avif'
+import photoSaleswomanWebp from '~/assets/img/photo/african-market-selling-with-client.webp'
+import photoSaleswoman from '~/assets/img/photo/african-market-selling-with-client.jpg'
 </script>
 
 <template>
@@ -109,11 +111,15 @@ import photoSaleswoman from '~/assets/img/photo/attractive-african-saleswoman-fr
                 </picture>
               </div>
               <div class="flex-1 rounded-2xl overflow-hidden ring-1 ring-white/[0.08] shadow-2xl">
-                <img
-                  :src="photoSaleswoman"
-                  alt="African saleswoman standing confidently with folded arms at her fruit stand"
-                  class="w-full h-full object-cover"
-                />
+                <picture class="w-full h-full">
+                  <source :srcset="photoSaleswomanAvif" type="image/avif" />
+                  <source :srcset="photoSaleswomanWebp" type="image/webp" />
+                  <img
+                    :src="photoSaleswoman"
+                    alt="African market seller with a client at a local market stall"
+                    class="w-full h-full object-cover"
+                  />
+                </picture>
               </div>
             </div>
           </div>
