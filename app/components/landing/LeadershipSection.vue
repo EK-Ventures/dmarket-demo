@@ -46,10 +46,10 @@ const capabilities = [
 
           <!-- Divider -->
           <div class="mt-10 pt-10 border-t border-charcoal-800 space-y-3">
-            <p class="text-sm font-semibold text-charcoal-200 leading-relaxed">
+            <p class="text-md font-bold text-charcoal-200 leading-relaxed">
               A UK-based venture with regional understanding and a disciplined approach to scale.
             </p>
-            <p class="text-sm font-semibold text-charcoal-200">
+            <p class="text-md text-charcoal-200">
               Now engaging aligned investors, strategic partners and non-executive support.
             </p>
           </div>

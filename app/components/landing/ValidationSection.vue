@@ -1,5 +1,6 @@
 <script setup>
 import { useScrollReveal } from '~/composables/useScrollReveal'
+import photoThumbnail from '~/assets/img/photo/young-black-african-businesswoman-local-market-smiling-browsing-online-using-smartphone-checking-reading-news-online-holding-apple.jpg'
 
 const { containerRef } = useScrollReveal()
 
@@ -38,21 +39,33 @@ const quotes = [
 
         <!-- YouTube Short -->
         <div class="reveal w-full max-w-[260px] mx-auto lg:mx-0">
-          <div class="relative aspect-[9/16] rounded-2xl overflow-hidden shadow-xl bg-charcoal-900">
-            <!-- TODO: replace VIDEO_ID with the actual YouTube Short video ID -->
-            <iframe
-              src="https://www.youtube.com/embed/VIDEO_ID?rel=0&modestbranding=1"
-              title="Market validation interviews"
-              class="absolute inset-0 w-full h-full"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
+          <div class="relative aspect-[9/16] rounded-2xl overflow-hidden shadow-xl bg-charcoal-900 group cursor-pointer">
+            <!-- Thumbnail -->
+            <img
+              :src="photoThumbnail"
+              alt="African businesswoman at a local market smiling while using a smartphone - field validation interview still"
+              class="absolute inset-0 w-full h-full object-cover opacity-55 group-hover:opacity-65 transition-opacity duration-300"
             />
+            <!-- Dark overlay -->
+            <div class="absolute inset-0 bg-charcoal-950/40" />
+            <!-- Play button -->
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="w-16 h-16 rounded-full bg-white/95 group-hover:bg-white group-hover:scale-110 flex items-center justify-center shadow-2xl transition-all duration-300">
+                <svg class="w-6 h-6 text-charcoal-900 ml-1" viewBox="0 0 20 24" fill="currentColor" aria-hidden="true">
+                  <path d="M0 0l20 12L0 24V0z" />
+                </svg>
+              </div>
+            </div>
+            <!-- Label -->
+            <div class="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/60 to-transparent">
+              <p class="text-white text-xs font-semibold">Market validation interviews</p>
+              <p class="text-white/70 text-xs mt-0.5">Primary research across target territories</p>
+            </div>
           </div>
         </div>
 
         <!-- Quotes -->
-        <div class="flex flex-col justify-between gap-4 lg:gap-5 h-full">
+        <div class="flex flex-col justify-between gap-2 h-full">
         <blockquote
           v-for="(quote, i) in quotes"
           :key="quote.text"
