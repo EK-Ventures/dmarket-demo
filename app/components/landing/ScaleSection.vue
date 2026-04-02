@@ -58,7 +58,7 @@ const blocks = [
         <div
           v-for="(block, i) in blocks"
           :key="block.title"
-          class="reveal bg-white p-7 lg:p-8 flex flex-col gap-5 hover:bg-neutral-50 transition-colors duration-200"
+          class="reveal bg-white p-7 lg:p-8 flex flex-col gap-5 hover:bg-neutral-50 transition-colors duration-200 items-center text-center"
           :class="i === 0 ? 'rounded-l-2xl' : i === 2 ? 'rounded-r-2xl' : ''"
           :style="{ transitionDelay: i * 120 + 'ms' }"
         >
@@ -78,11 +78,6 @@ const blocks = [
               v-html="block.icon"
             />
           </div>
-
-          <!-- Number label -->
-          <span class="text-xs font-bold tracking-[0.12em] uppercase text-neutral-500">
-            0{{ i + 1 }}
-          </span>
 
           <!-- Content -->
           <div>

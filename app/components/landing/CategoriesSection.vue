@@ -9,22 +9,25 @@ const { containerRef } = useScrollReveal()
 
 const categories = [
   {
-    title: 'Fresh produce',
-    body: 'For market sellers managing perishable stock and daily demand.',
     photo: photoProduce,
-    alt: 'Women browsing fresh fruit and vegetables at a vibrant outdoor market stall - warm, natural light',
+    tag: 'Fresh produce',
+    title: 'For market sellers',
+    body: 'Managing perishable stock and daily demand, reaching more buyers nearby.',
+    alt: 'African saleswoman at a fruit stand with folded arms, confident and ready to trade',
   },
   {
-    title: 'Goods',
-    body: 'For household items, packaged products and everyday essentials.',
     photo: photoGoods,
-    alt: 'African woman holding everyday household goods at a local market - authentic, documentary style',
+    tag: 'Goods',
+    title: 'For everyday essentials',
+    body: 'Household items, packaged products and everyday essentials, made easy to find.',
+    alt: 'African market vendor counting money while selling fruit and goods',
   },
   {
-    title: 'Handyman & local services',
-    body: 'For trusted neighbourhood services people need quickly.',
     photo: photoServices,
-    alt: 'African market woman using a mobile phone and pointing at the camera - engaging, connected, local commerce',
+    tag: 'Handyman & local services',
+    title: 'For trusted local services',
+    body: 'Neighbourhood services people need quickly, from trusted community providers.',
+    alt: 'Local service provider holding plants, representing community trade and services',
   },
 ]
 </script>
@@ -40,7 +43,7 @@ const categories = [
             One platform.<br />Everyday local commerce.
           </h2>
         </div>
-        <p class="text-sm text-neutral-500 max-w-xs leading-relaxed">
+        <p class="text-lg text-neutral-500 max-w-lg leading-relaxed">
           Built for the way communities already trade - with better visibility, trust and reach.
         </p>
       </div>
@@ -65,11 +68,14 @@ const categories = [
           <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
 
           <!-- Content -->
-          <div class="absolute inset-x-0 bottom-0 p-6 lg:p-7">
-            <h3 class="text-xl font-bold text-white leading-snug">
+          <div class="absolute bottom-0 left-0 right-0 p-6">
+            <span class="inline-block px-3 py-1 rounded-full bg-orange-500 text-white text-sm font-semibold mb-3">
+              {{ cat.tag }}
+            </span>
+            <h3 class="text-xl font-bold text-white mb-1.5">
               {{ cat.title }}
             </h3>
-            <p class="mt-1.5 text-sm text-white/75 leading-relaxed">
+            <p class="text-sm text-white/75 leading-relaxed">
               {{ cat.body }}
             </p>
           </div>

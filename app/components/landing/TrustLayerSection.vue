@@ -75,7 +75,7 @@ const features = [
             <!-- Content -->
             <div>
               <h3 class="text-base font-bold text-white leading-snug">{{ feature.title }}</h3>
-              <p class="mt-1.5 text-sm text-charcoal-400 leading-relaxed">{{ feature.body }}</p>
+              <p class="mt-1.5 text-sm text-charcoal-200 leading-relaxed">{{ feature.body }}</p>
             </div>
           </div>
         </div>

@@ -64,7 +64,7 @@ const capabilities = [
             :style="{ transitionDelay: i * 100 + 'ms' }"
           >
             <!-- Icon -->
-            <div class="w-16 h-16 rounded-2xl bg-charcoal-800 border border-charcoal-700 flex items-center justify-center mb-5">
+            <div class="w-16 h-16 rounded-2xl bg-charcoal-200 border border-charcoal-700 flex items-center justify-center mb-5">
               <svg
                 class="w-8 h-8 text-charcoal-300"
                 fill="none"
