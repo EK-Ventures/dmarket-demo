@@ -37,7 +37,7 @@ const { containerRef } = useScrollReveal()
           </p>
           <div class="mt-8">
             <a
-              href="#"
+              href="/register-interest"
               class="inline-flex items-center gap-2 px-6 py-3 text-sm font-bold bg-white text-orange-600 hover:bg-orange-50 rounded-xl transition-colors duration-150 shadow-sm"
             >
               Register your interest
@@ -74,7 +74,7 @@ const { containerRef } = useScrollReveal()
               <span class="text-md text-charcoal-400">SEIS Advance Assurance granted</span>
             </div>
             <a
-              href="#"
+              href="/investor-interest"
               class="inline-flex items-center gap-2 px-6 py-3 text-sm font-bold bg-charcoal-500 hover:bg-charcoal-400 text-white rounded-xl transition-all duration-150 self-start shadow-lg shadow-charcoal-500/30"
             >
               Investor / NED interest

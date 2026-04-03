@@ -61,13 +61,13 @@ function closeMenu() {
         <!-- Desktop CTAs -->
         <div class="hidden lg:flex items-center gap-2.5">
           <a
-            href="#investor"
+            href="/investor-interest"
             class="px-4 py-2 text-sm font-semibold text-charcoal-700 border border-neutral-600 hover:border-charcoal-400 hover:text-charcoal-900 rounded-xl transition-all duration-150 whitespace-nowrap"
           >
             Investor / NED interest
           </a>
           <a
-            href="#register"
+            href="/register-interest"
             class="px-4 py-2 text-sm font-semibold bg-orange-500 hover:bg-orange-600 text-white rounded-xl transition-colors duration-150 shadow-sm whitespace-nowrap"
           >
             Register interest
@@ -77,7 +77,7 @@ function closeMenu() {
         <!-- Mobile: CTA + Hamburger -->
         <div class="lg:hidden flex items-center gap-2">
           <a
-            href="#register"
+            href="/register-interest"
             class="px-3.5 py-2 text-sm font-semibold bg-orange-500 hover:bg-orange-600 text-white rounded-xl transition-colors duration-150"
           >
             Register
@@ -146,7 +146,7 @@ function closeMenu() {
         <!-- Investor CTA -->
         <div class="px-5 pb-5 pt-2 border-t border-neutral-300">
           <a
-            href="#investor"
+            href="/investor-interest"
             class="flex items-center justify-center w-full px-4 py-2.5 text-sm font-semibold text-charcoal-700 border border-neutral-200 hover:border-charcoal-400 rounded-xl transition-all duration-150"
             @click="closeMenu"
           >

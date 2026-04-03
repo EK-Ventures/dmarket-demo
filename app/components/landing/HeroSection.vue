@@ -1,4 +1,6 @@
 <script setup>
+const showValidationModal = useState('validationModal', () => false)
+
 import photoMainAvif from '~/assets/img/photo/excited-african-market-woman-using-mobile-phone.avif'
 import photoMainWebp from '~/assets/img/photo/excited-african-market-woman-using-mobile-phone.webp'
 import photoMain from '~/assets/img/photo/excited-african-market-woman-using-mobile-phone.jpg'
@@ -57,9 +59,10 @@ import photoSaleswoman from '~/assets/img/photo/african-market-selling-with-clie
             >
               Register your interest
             </a>
-            <a
-              href="#validation"
+            <button
+              type="button"
               class="inline-flex items-center gap-2.5 px-5 py-3 text-base font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/40 hover:border-white/70 rounded-xl transition-all duration-200 hover:-translate-y-0.5"
+              @click="showValidationModal = true"
             >
               <span class="flex-shrink-0 w-6 h-6 rounded-full bg-white/20 border border-white/40 flex items-center justify-center">
                 <svg class="w-2.5 h-2.5 text-white ml-px" viewBox="0 0 10 12" fill="currentColor" aria-hidden="true">
@@ -67,7 +70,7 @@ import photoSaleswoman from '~/assets/img/photo/african-market-selling-with-clie
                 </svg>
               </span>
               Watch validation video
-            </a>
+            </button>
           </div>
 
           <!-- Trust signals -->

@@ -6,7 +6,7 @@ import photoThumbnailWebp from '~/assets/img/photo/young-black-african-businessw
 import photoThumbnailJpg  from '~/assets/img/photo/young-black-african-businesswoman-local-market-with-smartphone.jpg'
 
 const { containerRef } = useScrollReveal()
-const showModal = ref(false)
+const showModal = useState('validationModal', () => false)
 
 const quotes = [
   {
