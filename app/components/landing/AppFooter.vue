@@ -82,8 +82,8 @@ const navLinks = [
           © 2026 DaMarket Ltd. All rights reserved.
         </p>
         <div class="flex items-center gap-4 pt-1">
-          <a href="#" class="text-sm text-neutral-400 hover:text-white transition-colors duration-150">Privacy</a>
-          <a href="#" class="text-sm text-neutral-400 hover:text-white transition-colors duration-150">Terms</a>
+          <NuxtLink to="/privacy" class="text-sm text-neutral-400 hover:text-white transition-colors duration-150">Privacy</NuxtLink>
+          <NuxtLink to="/terms" class="text-sm text-neutral-400 hover:text-white transition-colors duration-150">Terms</NuxtLink>
         </div>
       </div>
 

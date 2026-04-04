@@ -1,2 +1,3 @@
 User-Agent: *
 Disallow:
+Sitemap: https://dev.getondamarket.com/sitemap.xml

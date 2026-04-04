@@ -2,14 +2,23 @@
 import logoLight from '~/assets/img/logo-light.svg'
 import { useScrollReveal } from '~/composables/useScrollReveal'
 
-useHead({
+useSeoMeta({
   title: "Register your interest — d'Market",
-  meta: [
-    {
-      name: 'description',
-      content: "Pre-register your interest as a trader on d'Market. Be among the first to hear when d'Market launches in your area.",
-    },
-  ],
+  description: "Pre-register your interest as a trader on d'Market. Be among the first to hear when d'Market launches in your area.",
+  ogTitle: "Register your interest — d'Market",
+  ogDescription: "Pre-register your interest as a trader on d'Market. Be among the first to hear when d'Market launches in your area.",
+  ogImage: 'https://dev.getondamarket.com/app-shot.png',
+  ogUrl: 'https://dev.getondamarket.com/register-interest',
+  ogType: 'website',
+  ogSiteName: "d'Market",
+  twitterCard: 'summary_large_image',
+  twitterTitle: "Register your interest — d'Market",
+  twitterDescription: "Pre-register your interest as a trader on d'Market. Be among the first to hear when d'Market launches in your area.",
+  twitterImage: 'https://dev.getondamarket.com/app-shot.png',
+})
+
+useHead({
+  link: [{ rel: 'canonical', href: 'https://dev.getondamarket.com/register-interest' }],
 })
 
 const { containerRef } = useScrollReveal()

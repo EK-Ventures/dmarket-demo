@@ -3,14 +3,23 @@ import logoLight from '~/assets/img/logo-light.svg'
 import logoDark from '~/assets/img/logo-dark.svg'
 import { useScrollReveal } from '~/composables/useScrollReveal'
 
-useHead({
+useSeoMeta({
   title: "Investor & NED Interest — d'Market",
-  meta: [
-    {
-      name: 'description',
-      content: "Register your interest as an investor, NED or strategic supporter for d'Market's pre-seed SEIS round.",
-    },
-  ],
+  description: "Register your interest as an investor, NED or strategic supporter for d'Market's pre-seed SEIS round.",
+  ogTitle: "Investor & NED Interest — d'Market",
+  ogDescription: "Register your interest as an investor, NED or strategic supporter for d'Market's pre-seed SEIS round.",
+  ogImage: 'https://dev.getondamarket.com/app-shot.png',
+  ogUrl: 'https://dev.getondamarket.com/investor-interest',
+  ogType: 'website',
+  ogSiteName: "d'Market",
+  twitterCard: 'summary_large_image',
+  twitterTitle: "Investor & NED Interest — d'Market",
+  twitterDescription: "Register your interest as an investor, NED or strategic supporter for d'Market's pre-seed SEIS round.",
+  twitterImage: 'https://dev.getondamarket.com/app-shot.png',
+})
+
+useHead({
+  link: [{ rel: 'canonical', href: 'https://dev.getondamarket.com/investor-interest' }],
 })
 
 const { containerRef } = useScrollReveal()
